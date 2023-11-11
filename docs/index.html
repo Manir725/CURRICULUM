@@ -223,32 +223,32 @@ z-index: 0;
     </section>
 
 
-<section id="tab-progreso" class="slider">
-<h1 style="margin-top: 230px;">PROGRESO</h1>
-<h2 style="margin-bottom: 10px;">Gráficas sobre mi progreso (Más importantes):</h2>
-<div class="progress-chart-container" style="display: flex; gap: 50px; justify-content: space-between; margin-bottom: 50px;">
-               
-    <!-- 1 gráfico-->
-<div style="width: 200px; height: 200px;">
-    <canvas id="chartIngeniería"></canvas>
-</div>
+    <section id="tab-progreso" class="slider">
+        <h1 style="margin-top: 230px;">PROGRESO</h1>
+        <h2 style="margin-bottom: 10px;">Gráficas sobre mi progreso (Más importantes):</h2>
+        <div class="progress-chart-container" style="display: flex; gap: 50px; justify-content: space-between; margin-bottom: 50px;">
 
-<!-- Gráfico interactivo eJPTv2 -->
-<div style="width: 200px; height: 200px;">
-    <canvas id="chartEJPTv2"></canvas>
-</div>
+            <!-- 1 gráfico -->
+            <div style="width: 200px; height: 200px;">
+                <canvas id="chartIngeniería"></canvas>
+            </div>
 
-          <!-- 3 gráfico -->
-<div style="width: 200px; height: 200px;">
-    <canvas id="chartB2-Ingles"></canvas>
-</div>
-  
-    <!-- 4 gráfico - CCST -->
-<div style="width: 200px; height: 200px;">
-    <canvas id="chartAJC-CISCO"></canvas>
-</div>
-</section>
+            <!-- 2 gráfico - eJPTv2 -->
+            <div style="width: 200px; height: 200px;">
+                <canvas id="chartEJPTv2"></canvas>
+            </div>
 
+            <!-- 3 gráfico - B2 Inglés -->
+            <div style="width: 200px; height: 200px;">
+                <canvas id="chartB2-Ingles"></canvas>
+            </div>
+
+            <!-- 4 gráfico - AJC-CISCO -->
+            <div style="width: 200px; height: 200px;">
+                <canvas id="chartAJC-CISCO"></canvas>
+            </div>
+        </div>
+    </section>
 
         
 <section id="tab-Diplomas" class="slider">
@@ -296,15 +296,16 @@ z-index: 0;
 
 
 
+      <!-- Script para la gráfica eJPTv2 -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
             var chartEJPTv2 = new Chart(ctxEJPTv2, {
-                type: "doughnut", // Puedes cambiar el tipo de gráfico según tus necesidades
+                type: "doughnut",
                 data: {
-                    labels: ["Completado", "Pendiente"],
+                    labels: ["eJPTv2 Completado", "Pendiente"],
                     datasets: [{
-                        data: [100, 0], // Aquí deberías poner los datos reales
+                        data: [100, 0],
                         backgroundColor: ["rgb(113, 230, 240)", "#1e1f26"],
                         borderColor: "#1e1f26",
                         borderWidth: 2
@@ -313,15 +314,131 @@ z-index: 0;
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    cutout: 70, // Valor que determina el radio del círculo interno
                     legend: {
                         display: false
+                    },
+                    plugins: {
+                        legend: false,
+                        title: {
+                            display: true,
+                            text: 'eJPTv2',
+                            position: 'bottom',
+                            align: 'center'
+                        }
                     }
                 }
             });
         });
     </script>
 
-        
+    <!-- Script para la gráfica B2 Inglés -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var ctxB2Ingles = document.getElementById("chartB2-Ingles").getContext("2d");
+            var chartB2Ingles = new Chart(ctxB2Ingles, {
+                type: "doughnut",
+                data: {
+                    labels: ["B2 Inglés Completado", "Pendiente"],
+                    datasets: [{
+                        data: [60, 40],
+                        backgroundColor: ["rgb(113, 230, 240)", "#1e1f26"],
+                        borderColor: "#1e1f26",
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: 70, // Valor que determina el radio del círculo interno
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        legend: false,
+                        title: {
+                            display: true,
+                            text: 'B2 Inglés',
+                            position: 'bottom',
+                            align: 'center'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Script para la gráfica Ingeniería -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var ctxIngenieria = document.getElementById("chartIngeniería").getContext("2d");
+            var chartIngenieria = new Chart(ctxIngenieria, {
+                type: "doughnut",
+                data: {
+                    labels: ["Ingeniería Completado", "Pendiente"],
+                    datasets: [{
+                        data: [75, 25],
+                        backgroundColor: ["rgb(113, 230, 240)", "#1e1f26"],
+                        borderColor: "#1e1f26",
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: 70, // Valor que determina el radio del círculo interno
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        legend: false,
+                        title: {
+                            display: true,
+                            text: 'Ingeniería',
+                            position: 'bottom',
+                            align: 'center'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Script para la gráfica AJC-CISCO -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var ctxAJCCISCO = document.getElementById("chartAJC-CISCO").getContext("2d");
+            var chartAJCCISCO = new Chart(ctxAJCCISCO, {
+                type: "doughnut",
+                data: {
+                    labels: ["AJC-CISCO Completado", "Pendiente"],
+                    datasets: [{
+                        data: [100, 0],
+                        backgroundColor: ["rgb(113, 230, 240)", "#1e1f26"],
+                        borderColor: "#1e1f26",
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: 70, // Valor que determina el radio del círculo interno
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        legend: false,
+                        title: {
+                            display: true,
+                            text: 'AJC-CISCO',
+                            position: 'bottom',
+                            align: 'center'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
     
     <div id="particles-js"></div>
 
