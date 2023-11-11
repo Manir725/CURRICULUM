@@ -10,8 +10,8 @@ body {
 
 .logo-container {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    bottom: 25px;
+    left: 20px;
     width: 55%;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -19,7 +19,7 @@ body {
 }
 
 .logo-container:hover {
-    transform: scale(1.4);
+    transform: scale(1.1);
 }
 
 .nav,
