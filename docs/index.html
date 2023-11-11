@@ -28,7 +28,11 @@ z-index: 0;
             background-color: #1e1f26; 
             z-index: -1;/* Color de fondo general de la página */
         }
+        .slider {
+            margin-bottom: 0 !important;
+        }
 
+    
         #tab-permisos {
             background-color: #1e1f26; /* Aplica el mismo color de fondo que el cuerpo de la página */
             margin-bottom: 0 !important;
@@ -46,23 +50,26 @@ z-index: 0;
     margin-bottom: 500px !important;
 }
 
-.catalogue-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-}
 
-.catalogue-item img {
-    margin-bottom: 10px;
-}
+    
+        .catalogue-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
 
-.catalogue-item a {
-    align-self: flex-end;
-    text-decoration: none;
-    color: #fff; /* Puedes cambiar el color de los enlaces si lo deseas */
-}
-        .slider {
-            margin-bottom: 0 !important;
+        .catalogue-item img {
+            margin-bottom: 10px;
+            max-width: 100%; /* Ajusta para que las imágenes no excedan su contenedor */
+            height: auto; /* Para mantener la proporción original de la imagen */
+            border-radius: 8px; /* Agregado para esquinas redondeadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregado para sombra */
+        }
+
+        .catalogue-item a {
+            align-self: flex-end;
+            text-decoration: none;
+            color: #fff;
         }
 </style>
 </head>
