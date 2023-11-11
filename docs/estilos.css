@@ -654,13 +654,14 @@ ul li {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px; /* Espacio entre las imágenes */
     justify-content: center;
 }
 
 .diploma-image {
-    max-width: 100%;
+    width: 30px; /* Ancho de las imágenes */
     height: auto;
+    margin-right: 5px; /* Espacio a la derecha de cada imagen */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -685,5 +686,7 @@ ul li {
     align-items: center;
     justify-content: center;
 }
+
+
 
 
