@@ -7,6 +7,7 @@
     <title>CURRICULUM INTERACTIVO</title>
     <link rel="icon" href="images/logon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 #particles-js {
 background: #1e1f26;
@@ -240,32 +241,25 @@ z-index: 0;
 <h1 style="margin-top: 230px;">PROGRESO</h1>
 <h2 style="margin-bottom: 10px;">Gráficas sobre mi progreso (Más importantes):</h2>
 <div class="progress-chart-container" style="display: flex; gap: 50px; justify-content: space-between; margin-bottom: 50px;">
-                <!-- 1 gráfico-->
-    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="90" fill="#1e1f26" stroke="rgb(127, 255, 212)" stroke-width="20" stroke-dasharray="565.48" transform="rotate(-90 100 100)"/>
-        <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" style="font-size: 32px; font-weight: bold; fill: rgb(230, 230, 230);">75%</text>
-        <text x="50%" y="70%" text-anchor="middle" alignment-baseline="middle" style="font-size: 25px; font-weight: bold; fill: rgb(230, 230, 230);">Ingeniería</text>
-    </svg>
-  
-    <!-- 2 gráfico - eJPTv2 -->
-    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="90" fill="#1e1f26" stroke="rgb(113, 230, 240)" stroke-width="20" stroke-dasharray="565.48" transform="rotate(-90 100 100)"/>
-        <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" style="font-size: 32px; font-weight: bold; fill: rgb(230, 230, 230);">100%</text>
-        <text x="50%" y="70%" text-anchor="middle" alignment-baseline="middle" style="font-size: 25px; font-weight: bold; fill: rgb(230, 230, 230);">eJPTv2</text>
-    </svg>
+               
+    <!-- 1 gráfico-->
+<div style="width: 200px; height: 200px;">
+    <canvas id="chartIngeniería"></canvas>
+</div>
+
+<!-- Gráfico interactivo eJPTv2 -->
+<div style="width: 200px; height: 200px;">
+    <canvas id="chartEJPTv2"></canvas>
+</div>
+
           <!-- 3 gráfico -->
-    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="90" fill="#1e1f26" stroke="rgb(214, 80, 229)" stroke-width="20" stroke-dasharray="565.48" transform="rotate(-90 100 100)"/>
-        <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" style="font-size: 32px; font-weight: bold; fill: rgb(230, 230, 230);">50%</text>
-        <text x="50%" y="70%" text-anchor="middle" alignment-baseline="middle" style="font-size: 25px; font-weight: bold; fill: rgb(230, 230, 230);">B2-Inglés</text>
-    </svg>
+<div style="width: 200px; height: 200px;">
+    <canvas id="chartB2-Ingles"></canvas>
+</div>
   
     <!-- 4 gráfico - CCST -->
-    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="90" fill="#1e1f26" stroke="rgb(87, 44, 173)" stroke-width="20" stroke-dasharray="565.48" transform="rotate(-90 100 100)"/>
-        <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" style="font-size: 32px; font-weight: bold; fill: rgb(230, 230, 230);">100%</text>
-        <text x="50%" y="70%" text-anchor="middle" alignment-baseline="middle" style="font-size: 25px; font-weight: bold; fill: rgb(230, 230, 230);">AJC-CISCO</text>
-    </svg>
+<div style="width: 200px; height: 200px;">
+    <canvas id="chartAJC-CISCO"></canvas>
 </div>
 </section>
 
@@ -315,6 +309,33 @@ z-index: 0;
     </main>
 
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
+            var chartEJPTv2 = new Chart(ctxEJPTv2, {
+                type: "doughnut", // Puedes cambiar el tipo de gráfico según tus necesidades
+                data: {
+                    labels: ["Completado", "Pendiente"],
+                    datasets: [{
+                        data: [100, 0], // Aquí deberías poner los datos reales
+                        backgroundColor: ["rgb(113, 230, 240)", "#1e1f26"],
+                        borderColor: "#1e1f26",
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+        });
+    </script>
+
+        
     
     <div id="particles-js"></div>
 
