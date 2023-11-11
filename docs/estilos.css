@@ -10,11 +10,12 @@ body {
 
 .logo-container {
     position: fixed;
-    bottom: 25px;
-    left: 20px;
-    width: 55%;
+    top: 50%;
+    left: 90px; /* Ajusta la distancia desde la izquierda según tus necesidades */
+    z-index: 1000;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    transform: translateY(-50%);
     z-index: 1000; /* Ajusta el z-index según sea necesario */
 }
 
