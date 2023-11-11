@@ -182,7 +182,7 @@ ul li {
 }
 
 .diploma-image {
-    width: 30px; /* Ancho de las imágenes */
+    width: 80px; /* Ancho de las imágenes */
     height: auto;
     margin-right: 5px; /* Espacio a la derecha de cada imagen */
     border-radius: 8px;
@@ -199,7 +199,7 @@ ul li {
 }
 
 .container img {
-    width: 30px;
+    width: 80px;
     height: auto;
     margin-right: 5px;
 }
