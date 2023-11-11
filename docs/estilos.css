@@ -174,41 +174,40 @@ ul li {
     padding: 20px;
 }
 
-.gallery {
+/* Estilos para la galería de diplomas */
+
+#tab-Diplomas .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 5px; /* Espacio entre las imágenes */
     justify-content: center;
 }
 
-.diploma-image {
-    width: 150px; /* Ancho de las imágenes */
+#tab-Diplomas .diploma-image {
+    width: 220px; /* Ancho de las imágenes */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
 
-.diploma-image:hover {
-    transform: scale(1.1);
-}
-
-.container {
+#tab-Diplomas .container {
     display: flex;
-}
-
-.container img {
-    width: 150px;
-    height: auto;
-    margin-right: 5px;
-}
-
-.swiper-slide {
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
+#tab-Diplomas .container img {
+    width: 220px;
+    height: auto;
+    margin: 5px; /* Espacio entre las imágenes */
+}
+
+@media (min-width: 800px) {
+    #tab-Diplomas .container img {
+        width: calc(33.333% - 10px); /* Ancho de las imágenes para pantallas más grandes */
+    }
+}
 
 @media (min-width: 800px) {
   .nav h1,
