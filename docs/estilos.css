@@ -11,11 +11,10 @@ body {
 .logo-container {
     position: fixed;
     top: 50%;
-    left: 3000px; /* Ajusta la distancia desde la izquierda según tus necesidades */
-    z-index: 1000;
+    left: 15px; /* Ajusta según sea necesario */
+    transform: translateY(-50%);
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    transform: translateY(-50%);
     z-index: 1000; /* Ajusta el z-index según sea necesario */
 }
 
