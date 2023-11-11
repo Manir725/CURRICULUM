@@ -169,6 +169,38 @@ ul li {
   right: 0;
   z-index: auto;
 }
+/* Estilos adicionales para la sección de progreso */
+
+#tab-progreso .progress-chart-container {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#tab-progreso .progress-chart {
+    position: relative;
+    text-align: center;
+}
+
+#tab-progreso .progress-chart .title,
+#tab-progreso .progress-chart .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Letra en blanco */
+}
+
+#tab-progreso .progress-chart .title {
+    font-size: 18px; /* Tamaño de la fuente del título */
+}
+
+#tab-progreso .progress-chart .percentage {
+    font-size: 24px; /* Tamaño de la fuente del porcentaje */
+}
+
+
 #tab-Diplomas {
     /* Ajusta según sea necesario */
     padding: 20px;
