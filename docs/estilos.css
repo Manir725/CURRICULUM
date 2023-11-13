@@ -200,20 +200,16 @@ ul li {
     /* Ajusta según sea necesario */
     padding: 20px;
 }
+
 #tab-Diplomas .gallery {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px; /* Ajusta este valor según sea necesario */
+    grid-template-columns: repeat(6, calc(16.66% - 10px));
+    gap: 16px; /* Ajusta este valor según sea necesario */
+    margin: 0 20px; /* Ajusta el margen izquierdo y derecho según sea necesario */
 }
 
 #tab-Diplomas .diploma-image {
     width: 100%; /* Ajusta el tamaño según sea necesario */
-}
-/* Estilos adicionales para la sección de diplomas */
-#tab-Diplomas .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 
 #tab-Diplomas .diploma-image {
