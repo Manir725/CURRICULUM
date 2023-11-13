@@ -444,6 +444,63 @@ z-index: 0;
 </script>
 
 
+        
+<!-- Agrega estos bloques de código para cada gráfico -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+<script>
+    // Gráfico eJPTv2
+    var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
+    var chartEJPTv2 = new Chart(ctxEJPTv2, {
+        type: "doughnut",
+        data: {
+            labels: ["eJPTv2 Completado", "Pendiente"],
+            datasets: [{
+                data: [100, 0],
+                backgroundColor: ["#d08dfc", "#1e1f26"],
+                borderColor: "#1e1f26",
+                borderWidth: 2.5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: 70, // Valor que determina el radio del círculo interno
+            legend: false,
+            title: {
+                display: true,
+                text: 'eJPTv2',
+                position: 'bottom',
+                align: 'center'
+            },
+            plugins: {
+                datalabels: {
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value * 100 / sum).toFixed(2) + "%";
+                        return percentage;
+                    },
+                    color: '#fff',
+                    labels: {
+                        title: {
+                            font: {
+                                size: '16'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // Repite este bloque para cada gráfico
+</script>
+
 
     
     <div id="particles-js"></div>
