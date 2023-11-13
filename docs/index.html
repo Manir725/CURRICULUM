@@ -299,220 +299,140 @@ z-index: 0;
 
 <!-- Script para la gráfica eJPTv2 -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
-        var chartEJPTv2 = new Chart(ctxEJPTv2, {
-            type: "doughnut",
-            data: {
-                labels: ["eJPTv2 Completado", "Pendiente"],
-                datasets: [{
-                    data: [100, 0],
-                    backgroundColor: ["#d08dfc", "#1e1f26"],
-                    borderColor: "#1e1f26",
-                    borderWidth: 2.5
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: 70,
-                legend: {
-                    display: false
-                },
-                plugins: {
-                    legend: false,
-                    title: {
-                        display: true,
-                        text: 'eJPTv2',
-                        position: 'outside', // Cambiado de 'bottom' a 'outside'
-                        align: 'center'
-                    }
-                },
-                animation: {
-                    animateScale: true,
-                    animateRotate: true
-                },
-                onHover: function (event, chartElement) {
-                    event.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
-                },
-                tooltips: {
-                    enabled: false
-                },
-                hover: {
-                    mode: null
-                }
-            },
-            plugins: [{
-                afterDatasetsDraw: function (chart, easing) {
-                    var ctx = chart.ctx;
-                    chart.data.datasets.forEach(function (dataset, i) {
-                        var meta = chart.getDatasetMeta(i);
-                        if (!meta.hidden) {
-                            meta.data.forEach(function (element, index) {
-                                // Draw the text inside the doughnut chart, at the center.
-                                var fontSize = 12;
-                                var fontStyle = 'normal';
-                                var fontFamily = 'Helvetica Neue';
-                                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-                                ctx.fillStyle = 'white';
-                                ctx.textAlign = 'center';
-                                ctx.textBaseline = 'middle';
-                                var centerX = (element._model.x + meta.data[index]._model.x) / 2;
-                                var centerY = (element._model.y + meta.data[index]._model.y) / 2;
-                                var percent = dataset.data[index] + '%';
-                                ctx.fillText(percent, centerX, centerY + fontSize);
-                            });
-                        }
-                    });
-                }
+    var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
+    var chartEJPTv2 = new Chart(ctxEJPTv2, {
+        type: "doughnut",
+        data: {
+            labels: ["eJPTv2 Completado", "Pendiente"],
+            datasets: [{
+                data: [100, 0],
+                backgroundColor: ["#d08dfc", "#1e1f26"],
+                borderColor: "#1e1f26",
+                borderWidth: 2.5
             }]
-        });
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: 70, // Valor que determina el radio del círculo interno
+            legend: {
+                display: false
+            },
+            plugins: {
+                legend: false,
+                title: {
+                    display: true,
+                    text: 'eJPTv2',
+                    position: 'bottom',
+                    align: 'center'
+                }
+            }
+        }
     });
 </script>
 
 <!-- Script para la gráfica B2 Inglés -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var ctxB2Ingles = document.getElementById("chartB2-Ingles").getContext("2d");
-        var chartB2Ingles = new Chart(ctxB2Ingles, {
-            type: "doughnut",
-            data: {
-                labels: ["B2 Inglés Completado", "Pendiente"],
-                datasets: [{
-                    data: [60, 40],
-                    backgroundColor: ["#4fff7e", "#1e1f26"],
-                    borderColor: "#1e1f26",
-                    borderWidth: 2.5
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: 70,
-                legend: {
-                    display: false
-                },
-                plugins: {
-                    legend: false,
-                    title: {
-                        display: true,
-                        text: 'B2 Inglés',
-                        position: 'outside', // Cambiado de 'bottom' a 'outside'
-                        align: 'center'
-                    }
-                },
-                animation: {
-                    animateScale: true,
-                    animateRotate: true
-                },
-                onHover: function (event, chartElement) {
-                    event.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
-                },
-                tooltips: {
-                    enabled: false
-                },
-                hover: {
-                    mode: null
-                }
-            },
-            plugins: [{
-                afterDatasetsDraw: function (chart, easing) {
-                    var ctx = chart.ctx;
-                    chart.data.datasets.forEach(function (dataset, i) {
-                        var meta = chart.getDatasetMeta(i);
-                        if (!meta.hidden) {
-                            meta.data.forEach(function (element, index) {
-                                var fontSize = 12;
-                                var fontStyle = 'normal';
-                                var fontFamily = 'Helvetica Neue';
-                                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-                                ctx.fillStyle = 'white';
-                                ctx.textAlign = 'center';
-                                ctx.textBaseline = 'middle';
-                                var centerX = (element._model.x + meta.data[index]._model.x) / 2;
-                                var centerY = (element._model.y + meta.data[index]._model.y) / 2;
-                                var percent = dataset.data[index] + '%';
-                                ctx.fillText(percent, centerX, centerY + fontSize);
-                            });
-                        }
-                    });
-                }
+    var ctxB2Ingles = document.getElementById("chartB2-Ingles").getContext("2d");
+    var chartB2Ingles = new Chart(ctxB2Ingles, {
+        type: "doughnut",
+        data: {
+            labels: ["B2 Inglés Completado", "Pendiente"],
+            datasets: [{
+                data: [60, 40],
+                backgroundColor: ["#4fff7e", "#1e1f26"],
+                borderColor: "#1e1f26",
+                borderWidth: 2.5
             }]
-        });
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: 70, // Valor que determina el radio del círculo interno
+            legend: {
+                display: false
+            },
+            plugins: {
+                legend: false,
+                title: {
+                    display: true,
+                    text: 'B2 Inglés',
+                    position: 'bottom',
+                    align: 'center'
+                }
+            }
+        }
     });
 </script>
 
 <!-- Script para la gráfica Ingeniería -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var ctxIngenieria = document.getElementById("chartIngeniería").getContext("2d");
-        var chartIngenieria = new Chart(ctxIngenieria, {
-            type: "doughnut",
-            data: {
-                labels: ["Ingeniería Completado", "Pendiente"],
-                datasets: [{
-                    data: [75, 25],
-                    backgroundColor: ["#8599ff", "#1e1f26"],
-                    borderColor: "#1e1f26",
-                    borderWidth: 2.5
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: 70,
-                legend: {
-                    display: false
-                },
-                plugins: {
-                    legend: false,
-                    title: {
-                        display: true,
-                        text: 'Ingeniería',
-                        position: 'outside', // Cambiado de 'bottom' a 'outside'
-                        align: 'center'
-                    }
-                },
-                animation: {
-                    animateScale: true,
-                    animateRotate: true
-                },
-                onHover: function (event, chartElement) {
-                    event.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
-                },
-                tooltips: {
-                    enabled: false
-                },
-                hover: {
-                    mode: null
-                }
-            },
-            plugins: [{
-                afterDatasetsDraw: function (chart, easing) {
-                    var ctx = chart.ctx;
-                    chart.data.datasets.forEach(function (dataset, i) {
-                        var meta = chart.getDatasetMeta(i);
-                        if (!meta.hidden) {
-                            meta.data.forEach(function (element, index) {
-                                var fontSize = 12;
-                                var fontStyle = 'normal';
-                                var fontFamily = 'Helvetica Neue';
-                                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-                                ctx.fillStyle = 'white';
-                                ctx.textAlign = 'center';
-                                ctx.textBaseline = 'middle';
-                                var centerX = (element._model.x + meta.data[index]._model.x) / 2;
-                                var centerY = (element._model.y + meta.data[index]._model.y) / 2;
-                                var percent = dataset.data[index] + '%';
-                                ctx.fillText(percent, centerX, centerY + fontSize);
-                            });
-                        }
-                    });
-                }
+    var ctxIngenieria = document.getElementById("chartIngeniería").getContext("2d");
+    var chartIngenieria = new Chart(ctxIngenieria, {
+        type: "doughnut",
+        data: {
+            labels: ["Ingeniería Completado", "Pendiente"],
+            datasets: [{
+                data: [75, 25],
+                backgroundColor: ["#8599ff", "#1e1f26"],
+                borderColor: "#1e1f26",
+                borderWidth: 2.5
             }]
-        });
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: 70, // Valor que determina el radio del círculo interno
+            legend: {
+                display: false
+            },
+            plugins: {
+                legend: false,
+                title: {
+                    display: true,
+                    text: 'Ingeniería',
+                    position: 'bottom',
+                    align: 'center'
+                }
+            }
+        }
     });
 </script>
+
+<!-- Script para la gráfica AJC-CISCO -->
+<script>
+    var ctxAJCCISCO = document.getElementById("chartAJC-CISCO").getContext("2d");
+    var chartAJCCISCO = new Chart(ctxAJCCISCO, {
+        type: "doughnut",
+        data: {
+            labels: ["AJC-CISCO Completado", "Pendiente"],
+            datasets: [{
+                data: [100, 0],
+                backgroundColor: ["rgb(113, 230, 240)", "#1e1f26"],
+                borderColor: "#1e1f26",
+                borderWidth: 2.5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: 70, // Valor que determina el radio del círculo interno
+            legend: {
+                display: false
+            },
+            plugins: {
+                legend: false,
+                title: {
+                    display: true,
+                    text: 'AJC-CISCO',
+                    position: 'center',
+                    align: 'center'
+                }
+            }
+        }
+    });
+</script>
+
 
 
     
