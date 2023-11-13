@@ -225,9 +225,9 @@ ul li {
 }
 
 .diploma-image {
-    width: 260px;
+    width: 250px;
     height: auto;
-    margin: 20px;
+    margin: 30px;
     transition: transform 0.3s;
     cursor: pointer;
 }
