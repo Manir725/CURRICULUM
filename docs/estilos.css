@@ -211,6 +211,15 @@ ul li {
     /* Ajusta según sea necesario */
     padding: 20px;
 }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* Ajusta este valor según sea necesario */
+}
+
+.diploma-image {
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+}
 /* Estilos adicionales para la sección de diplomas */
 #tab-Diplomas .gallery {
     display: flex;
