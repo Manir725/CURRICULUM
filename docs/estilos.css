@@ -421,7 +421,7 @@ ul li {
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 25px 50px; /* Aumenta el padding para hacer la caja más grande */
+  padding: 85px 90px; /* Aumenta el padding para hacer la caja más grande */
   margin-top: 35px;
   margin-bottom: 62px;
   justify-content: center;
@@ -440,15 +440,15 @@ ul li {
 /* Estilos para la caja de descarga del currículum */
 #download-box {
   border: 2px solid #ffffff; /* Borde blanco */
-  padding: 100px; /* Espaciado interno */
-  margin: 100px 0; /* Espaciado externo */
+  padding: 300px; /* Espaciado interno */
+  margin: 300px 0; /* Espaciado externo */
   text-align: center; /* Centra el contenido */
 }
 #download-button {
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 53px 55px;
+  padding: 93px 95px;
   justify-content: center;
   align-items: center;
   display: inline-block;
