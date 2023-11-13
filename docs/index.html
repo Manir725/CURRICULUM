@@ -8,6 +8,8 @@
     <link rel="icon" href="images/logon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <style>
 #particles-js {
 background: #1e1f26;
@@ -234,8 +236,7 @@ z-index: 0;
             <canvas id="chartIngeniería"></canvas>
         </div>
 
-        <!-- 2 gráfico - eJPTv2 -->
-        <div style="width: 300px; height: 300px;">
+        <div>
             <canvas id="chartEJPTv2"></canvas>
         </div>
 
@@ -307,12 +308,12 @@ z-index: 0;
     </main>
 
 
-<!-- Script para la gráfica eJPTv2 -->
-<script>
-    var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
-    var chartEJPTv2 = new Chart(ctxEJPTv2, {
-        type: "doughnut",
-        data: {
+    <script>
+        // Inicialización de Chart.js
+        Chart.defaults.global.defaultFontColor = 'white'; // Color del texto
+
+        // Datos de ejemplo para eJPTv2 (ajusta según sea necesario)
+        var dataEJPTv2 = {
             labels: ["eJPTv2 Completado", "Pendiente"],
             datasets: [{
                 data: [100, 0],
@@ -320,22 +321,15 @@ z-index: 0;
                 borderColor: "#1e1f26",
                 borderWidth: 2.5
             }]
-        },
-        options: {
+        };
+
+        // Opciones comunes para todas las gráficas
+        var commonOptions = {
             responsive: true,
             maintainAspectRatio: false,
-            cutout: 70, // Valor que determina el radio del círculo interno
+            cutout: 70,
             plugins: {
                 legend: false,
-                title: {
-                    display: true,
-                    text: 'eJPTv2',
-                    position: 'bottom',
-                    align: 'center',
-                    fontStyle: 'bold',
-                    fontSize: 18,
-                    padding: 20,
-                },
                 datalabels: {
                     formatter: (value, ctx) => {
                         let sum = 0;
@@ -356,9 +350,27 @@ z-index: 0;
                     },
                 },
             },
-        },
-    });
-</script>
+        };
+
+        // Configuración de la gráfica eJPTv2
+        var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
+        var chartEJPTv2 = new Chart(ctxEJPTv2, {
+            type: "doughnut",
+            data: dataEJPTv2,
+            options: {
+                ...commonOptions, // Se utilizan opciones comunes
+                title: {
+                    display: true,
+                    text: 'eJPTv2', // Puedes cambiar el título según sea necesario
+                    position: 'bottom',
+                    align: 'center',
+                    fontStyle: 'bold',
+                    fontSize: 18,
+                    padding: 20,
+                },
+            },
+        });
+    </script>
 
 
 
