@@ -176,22 +176,24 @@ ul li {
     text-align: center;
 }
 
-#tab-progreso .progress-chart .title,
-#tab-progreso .progress-chart .percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff; /* Letra en blanco */
+.progress-chart .title {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* Letra en blanco */
 }
 
-#tab-progreso .progress-chart .title {
-    font-size: 20px; /* Tamaño de la fuente del título (2px más grande) */
-}
-
-#tab-progreso .progress-chart .percentage {
-    font-size: 26px; /* Tamaño de la fuente del porcentaje (2px más grande) */
-    font-weight: bold; /* Texto en negrita para el porcentaje */
+/* Ajusta el tamaño del porcentaje y su posición */
+.progress-chart .percentage {
+  font-size: 26px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* Letra en blanco */
 }
 
 
