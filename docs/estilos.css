@@ -417,20 +417,25 @@ ul li {
 }
 
 .btn {
-  /* Los estilos existentes para el botón */
   display: inline-block;
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 13px 25px;
+  padding: 25px 50px; /* Aumenta el padding para hacer la caja más grande */
   margin-top: 35px;
   margin-bottom: 62px;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease-in-out; /* Agrega una transición suave */
 }
 
 .btn:hover {
   background-color: rgb(154, 30, 165);
+}
+
+/* Estilos para el contenido de la página */
+.content {
+  margin: 50px; /* Agrega más espacio alrededor del contenido */
 }
 /* Estilos para la caja de descarga del currículum */
 #download-box {
@@ -469,6 +474,15 @@ ul li {
   .nav-tab {
     font-size: 1.8vw;
   }
+
+  /* Ajustes para el botón y el contenido en tamaños de pantalla más pequeños */
+  .btn {
+    padding: 20px 40px;
+  }
+
+  .content {
+    margin: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -486,6 +500,14 @@ ul li {
   .nav-tab {
     font-size: 1.5vw;
   }
+
+  .btn {
+    padding: 15px 30px;
+  }
+
+  .content {
+    margin: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -502,5 +524,13 @@ ul li {
 
   .nav-tab {
     font-size: 2vw;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .content {
+    margin: 10px;
   }
 }
