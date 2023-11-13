@@ -208,31 +208,33 @@ ul li {
 
 
 /* Estilos adicionales para la sección de diplomas */
-
 #tab-Diplomas .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 #tab-Diplomas .diploma-image {
-    width: 200px; /* Ajusta el ancho de las imágenes según tus necesidades */
-    height: 150px; /* Ajusta la altura de las imágenes según tus necesidades */
-    object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
-    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de escala */
+  width: 200px; /* Ajusta el ancho de las imágenes según tus necesidades */
+  height: 150px; /* Ajusta la altura de las imágenes según tus necesidades */
+  object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
+  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de escala */
 }
 
 #tab-Diplomas .diploma-image:hover {
-    transform: scale(1.1); /* Escala la imagen al 110% al pasar el ratón */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón para indicar interactividad */
+  transform: scale(1.1); /* Escala la imagen al 110% al pasar el ratón */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón para indicar interactividad */
 }
 
+  /* Ajuste para la segunda fila */
+.diploma-image:nth-child(n+7) {
+     width: calc(20% - 10px);
+}
 
 @media (min-width: 800px) {
-    #tab-Diplomas .container img {
-        width: calc(33.333% - 10px); /* Ancho de las imágenes para pantallas más grandes */
-    }
-}
+  #tab-Diplomas .container img {
+    width: calc(33.333% - 10px); /* Ancho de las imágenes para pantallas más grandes */
+  }
 
 @media (min-width: 800px) {
   .nav h1,
