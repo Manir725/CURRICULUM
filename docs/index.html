@@ -316,12 +316,12 @@ nav.nav-container {
     </main>
 
 
-    <script>
-        // Inicialización de Chart.js
-        Chart.defaults.global.defaultFontColor = 'white'; // Color del texto
-
-        // Datos de ejemplo para eJPTv2 (ajusta según sea necesario)
-        var dataEJPTv2 = {
+<!-- Script para la gráfica eJPTv2 -->
+<script>
+    var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
+    var chartEJPTv2 = new Chart(ctxEJPTv2, {
+        type: "doughnut",
+        data: {
             labels: ["eJPTv2 Completado", "Pendiente"],
             datasets: [{
                 data: [100, 0],
@@ -329,59 +329,13 @@ nav.nav-container {
                 borderColor: "#1e1f26",
                 borderWidth: 2.5
             }]
-        };
-
-        // Opciones comunes para todas las gráficas
-        var commonOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
-            cutout: 70,
-            plugins: {
-                legend: false,
-                datalabels: {
-                    formatter: (value, ctx) => {
-                        let sum = 0;
-                        let dataArr = ctx.chart.data.datasets[0].data;
-                        dataArr.map(data => {
-                            sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(2) + "%";
-                        return percentage;
-                    },
-                    color: '#fff',
-                    labels: {
-                        title: {
-                            font: {
-                                size: '16',
-                            },
-                        },
-                    },
-                },
-            },
-        };
-
-        // Configuración de la gráfica eJPTv2
-        var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
-        var chartEJPTv2 = new Chart(ctxEJPTv2, {
-            type: "doughnut",
-            data: dataEJPTv2,
-            options: {
-                ...commonOptions, // Se utilizan opciones comunes
-                title: {
-                    display: true,
-                    text: 'eJPTv2', // Puedes cambiar el título según sea necesario
-                    position: 'bottom',
-                    align: 'center',
-                    fontStyle: 'bold',
-                    fontSize: 18,
-                    padding: 20,
-                },
-            },
-        });
-    </script>
+        },
+        options: obtenerOpcionesGrafica("eJPTv2")
+    });
+</script>
 
 
-    <!-- Script para la gráfica Ingeniería -->
+<!-- Script para la gráfica Ingeniería -->
 <script>
     var ctxIngenieria = document.getElementById("chartIngeniería").getContext("2d");
     var chartIngenieria = new Chart(ctxIngenieria, {
@@ -445,15 +399,6 @@ nav.nav-container {
             maintainAspectRatio: false,
             cutout: 70,
             legend: false,
-            title: {
-                display: true,
-                text: titulo,
-                position: 'bottom',
-                align: 'center',
-                fontStyle: 'bold',
-                fontSize: 18,
-                padding: 20,
-            },
             plugins: {
                 datalabels: {
                     formatter: (value, ctx) => {
@@ -475,9 +420,19 @@ nav.nav-container {
                     }
                 }
             },
+            title: {
+                display: true,
+                text: titulo,
+                position: 'bottom',
+                align: 'center',
+                fontStyle: 'bold',
+                fontSize: 18,
+                padding: 20,
+            }
         };
     }
 </script>
+
 
 
     
