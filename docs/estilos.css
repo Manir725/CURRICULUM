@@ -240,7 +240,6 @@ ul li {
 }
 
 
-
 @media (min-width: 800px) {
   .nav h1,
   .slider h1 {
@@ -693,7 +692,5 @@ ul li {
 .btn:hover {
   background-color: rgb(154, 30, 165);
 }
-
-
 
 
