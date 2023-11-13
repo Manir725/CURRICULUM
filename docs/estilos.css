@@ -204,29 +204,44 @@ ul li {
 }
 
 #tab-Diplomas .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Utiliza un enfoque de diseño flexible para las imágenes */
-    gap: 16px; /* Ajusta este valor según sea necesario */
-    margin: 0 20px; /* Ajusta el margen izquierdo y derecho según sea necesario */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Cambié el ancho de las columnas */
+  gap: 16px;
+  margin: 0 20px;
 }
 
 #tab-Diplomas .diploma-image {
-    width: 100%; /* Ajusta el tamaño según sea necesario */
-    height: auto; /* Ajusta la altura automáticamente para mantener la proporción original */
-    object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
-    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de escala */
+  width: 100%;
+  height: auto; /* Cambiado de height: 220px; */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (min-width: 800px) {
-    #tab-Diplomas .diploma-image {
-        width: 100%; /* Ajusta el ancho de las imágenes para pantallas más grandes */
-    }
+  #tab-Diplomas .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  #tab-Diplomas .diploma-image {
+    width: 100%;
+  }
+}
+
+#tab-Diplomas .diploma-image:nth-child(n+7) {
+  width: 100%; /* Cambiado de width: calc(20% - 10px); */
+}
+
+@media (min-width: 800px) {
+  #tab-Diplomas .diploma-image:nth-child(n+7) {
+    width: 100%; /* Cambiado de width: calc(20% - 10px); */
+  }
 }
 
 #tab-Diplomas .diploma-image:hover {
-    transform: scale(1.1); /* Escala la imagen al 110% al pasar el ratón */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón para indicar interactividad */
+  transform: scale(1.1);
+  cursor: pointer;
 }
+
 
 
 
