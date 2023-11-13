@@ -483,6 +483,9 @@ ul li {
   .content {
     margin: 30px;
   }
+    .diploma-image {
+    width: 250px; /* Ajusta el tamaño para pantallas más pequeñas */
+  }
 }
 
 @media (max-width: 768px) {
@@ -508,6 +511,9 @@ ul li {
   .content {
     margin: 20px;
   }
+    .diploma-image {
+    width: 200px; /* Ajusta el tamaño para pantallas más pequeñas */
+  }
 }
 
 @media (max-width: 480px) {
@@ -532,5 +538,8 @@ ul li {
 
   .content {
     margin: 10px;
+  }
+    .diploma-image {
+    width: 150px; /* Ajusta el tamaño para pantallas más pequeñas */
   }
 }
