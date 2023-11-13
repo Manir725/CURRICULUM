@@ -175,26 +175,25 @@ ul li {
     position: relative;
     text-align: center;
 }
-
-.progress-chart .title {
-  font-size: 20px;
+#tab-progreso .progress-chart .title,
+#tab-progreso .progress-chart .percentage {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff; /* Letra en blanco */
+  color: #fff;
+  text-align: center; /* Agregado para centrar el texto */
 }
 
-/* Ajusta el tamaño del porcentaje y su posición */
-.progress-chart .percentage {
+#tab-progreso .progress-chart .title {
+  font-size: 20px;
+}
+
+#tab-progreso .progress-chart .percentage {
   font-size: 26px;
   font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff; /* Letra en blanco */
 }
+
 
 
 
@@ -204,28 +203,34 @@ ul li {
 }
 
 #tab-Diplomas .gallery {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Cambié el ancho de las columnas */
-  gap: 16px;
-  margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px; /* Ajusta este valor según sea necesario */
+    margin: 20px; /* Ajusta el margen izquierdo y derecho según sea necesario */
 }
 
 #tab-Diplomas .diploma-image {
-  width: 100%;
-  height: auto; /* Cambiado de height: 220px; */
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 120px; /* Ajusta la altura de las imágenes según tus necesidades */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+#tab-Diplomas .diploma-image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 @media (min-width: 800px) {
-  #tab-Diplomas .gallery {
-    grid-template-columns: repeat(6, 1fr);
-  }
+    #tab-Diplomas .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
 
-  #tab-Diplomas .diploma-image {
-    width: 100%;
-  }
+    #tab-Diplomas .diploma-image {
+        height: 140px;
+    }
 }
+
 
 #tab-Diplomas .diploma-image:nth-child(n+7) {
   width: 100%; /* Cambiado de width: calc(20% - 10px); */
