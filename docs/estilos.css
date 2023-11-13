@@ -169,20 +169,36 @@ ul li {
   right: 0;
   z-index: auto;
 }
-/* Estilos adicionales para la sección de progreso */
+/* Estilo para los enlaces debajo de las fotos en la sección de contacto */
+#tab-contacto .contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Ajusta el espacio entre los enlaces según sea necesario */
+}
 
+#tab-contacto .contact-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Ajusta el tamaño del texto según sea necesario */
+}
+
+
+/* Estilos adicionales para la sección de progreso */
 #tab-progreso .progress-chart {
     position: relative;
     text-align: center;
 }
 #tab-progreso .progress-chart .title,
 #tab-progreso .progress-chart .percentage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center; /* Agregado para centrar el texto */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 22px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
 }
 
 #tab-progreso .progress-chart .title {
