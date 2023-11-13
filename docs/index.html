@@ -223,32 +223,33 @@ z-index: 0;
     </section>
 
 
-    <section id="tab-progreso" class="slider">
-        <h1 style="margin-top: 230px;">PROGRESO</h1>
-        <h2 style="margin-bottom: 38px;">Gráficas sobre mi progreso (Más importantes):</h2>
-        <div class="progress-chart-container" style="display: flex; gap: 70px; justify-content: space-between; margin-bottom: 50px;">
+<!-- Sección de progreso -->
+<section id="tab-progreso" class="slider">
+    <h1 style="margin-top: 230px;">PROGRESO</h1>
+    <h2 style="margin-bottom: 38px;">Gráficas sobre mi progreso (Más importantes):</h2>
+    <div class="progress-chart-container" style="display: flex; gap: 70px; justify-content: space-between; margin-bottom: 50px;">
 
-            <!-- 1 gráfico -->
-            <div style="width: 300px; height: 300px;">
-                <canvas id="chartIngeniería"></canvas>
-            </div>
-
-            <!-- 2 gráfico - eJPTv2 -->
-            <div style="width: 300px; height: 300px;">
-                <canvas id="chartEJPTv2"></canvas>
-            </div>
-
-            <!-- 3 gráfico - B2 Inglés -->
-            <div style="width: 300px; height: 300px;">
-                <canvas id="chartB2-Ingles"></canvas>
-            </div>
-
-            <!-- 4 gráfico - AJC-CISCO -->
-            <div style="width: 300px; height: 300px;">
-                <canvas id="chartAJC-CISCO"></canvas>
-            </div>
+        <!-- 1 gráfico - Ingeniería -->
+        <div style="width: 300px; height: 300px;">
+            <canvas id="chartIngeniería"></canvas>
         </div>
-    </section>
+
+        <!-- 2 gráfico - eJPTv2 -->
+        <div style="width: 300px; height: 300px;">
+            <canvas id="chartEJPTv2"></canvas>
+        </div>
+
+        <!-- 3 gráfico - B2 Inglés -->
+        <div style="width: 300px; height: 300px;">
+            <canvas id="chartB2-Ingles"></canvas>
+        </div>
+
+        <!-- 4 gráfico - AJC-CISCO -->
+        <div style="width: 300px; height: 300px;">
+            <canvas id="chartAJC-CISCO"></canvas>
+        </div>
+    </div>
+</section>
 
         
 <section id="tab-Diplomas" class="slider">
@@ -306,10 +307,9 @@ z-index: 0;
     </main>
 
 
-
-<!-- Script para la gráfica eJPTv2 -->
-<!-- Script para la gráfica eJPTv2 -->
+<!-- Agrega estos bloques de código para cada gráfico -->
 <script>
+    // Gráfico eJPTv2
     var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
     var chartEJPTv2 = new Chart(ctxEJPTv2, {
         type: "doughnut",
@@ -326,17 +326,14 @@ z-index: 0;
             responsive: true,
             maintainAspectRatio: false,
             cutout: 70, // Valor que determina el radio del círculo interno
+            legend: false,
+            title: {
+                display: true,
+                text: 'eJPTv2',
+                position: 'bottom',
+                align: 'center'
+            },
             plugins: {
-                legend: false,
-                title: {
-                    display: true,
-                    text: 'eJPTv2',
-                    position: 'bottom',
-                    align: 'center',
-                    fontStyle: 'bold',
-                    fontSize: 18,
-                    padding: 20,
-                },
                 datalabels: {
                     formatter: (value, ctx) => {
                         let sum = 0;
@@ -351,14 +348,16 @@ z-index: 0;
                     labels: {
                         title: {
                             font: {
-                                size: '16',
-                            },
-                        },
-                    },
-                },
-            },
-        },
+                                size: '16'
+                            }
+                        }
+                    }
+                }
+            }
+        }
     });
+
+    // Repite este bloque para cada gráfico
 </script>
 
 
