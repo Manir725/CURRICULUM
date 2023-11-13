@@ -295,9 +295,23 @@ ul li {
 /* Estilos para la caja de descarga del currículum */
 #download-box {
   border: 2px solid #ffffff; /* Borde blanco */
-  padding: 300px; /* Espaciado interno */
-  margin: 300px 0; /* Espaciado externo */
+  padding: 70px; /* Espaciado interno - ajustado */
+  margin: 100px 0; /* Espaciado externo */
   text-align: center; /* Centra el contenido */
+}
+
+#download-button {
+  background-color: rgb(14, 125, 161);
+  color: rgb(255, 255, 255);
+  text-decoration: bold;
+  padding: 53px 25px; /* Ajustado para reducir 30px a cada lado */
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+
+#download-button:hover {
+  background-color: rgb(154, 30, 165);
 }
 
 /* Agregar estilos específicos para tabletas y móviles */
