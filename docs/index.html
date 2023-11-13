@@ -333,23 +333,52 @@ z-index: 0;
                     display: false
                 },
                 plugins: {
+                    legend: false,
                     title: {
                         display: true,
                         text: 'eJPTv2',
-                        position: 'center',
-                        align: 'center',
-                        color: '#FFFFFF', // Letra blanca
-                        font: {
-                            size: 14,
-                            weight: 'bold'
-                        }
+                        position: 'outside', // Cambiado de 'bottom' a 'outside'
+                        align: 'center'
                     }
                 },
                 animation: {
-                    animateRotate: true,
-                    animateScale: true
+                    animateScale: true,
+                    animateRotate: true
+                },
+                onHover: function (event, chartElement) {
+                    event.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+                },
+                tooltips: {
+                    enabled: false
+                },
+                hover: {
+                    mode: null
                 }
-            }
+            },
+            plugins: [{
+                afterDatasetsDraw: function (chart, easing) {
+                    var ctx = chart.ctx;
+                    chart.data.datasets.forEach(function (dataset, i) {
+                        var meta = chart.getDatasetMeta(i);
+                        if (!meta.hidden) {
+                            meta.data.forEach(function (element, index) {
+                                // Draw the text inside the doughnut chart, at the center.
+                                var fontSize = 12;
+                                var fontStyle = 'normal';
+                                var fontFamily = 'Helvetica Neue';
+                                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+                                ctx.fillStyle = 'white';
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'middle';
+                                var centerX = (element._model.x + meta.data[index]._model.x) / 2;
+                                var centerY = (element._model.y + meta.data[index]._model.y) / 2;
+                                var percent = dataset.data[index] + '%';
+                                ctx.fillText(percent, centerX, centerY + fontSize);
+                            });
+                        }
+                    });
+                }
+            }]
         });
     });
 </script>
@@ -377,23 +406,51 @@ z-index: 0;
                     display: false
                 },
                 plugins: {
+                    legend: false,
                     title: {
                         display: true,
                         text: 'B2 Inglés',
-                        position: 'center',
-                        align: 'center',
-                        color: '#FFFFFF',
-                        font: {
-                            size: 14,
-                            weight: 'bold'
-                        }
+                        position: 'outside', // Cambiado de 'bottom' a 'outside'
+                        align: 'center'
                     }
                 },
                 animation: {
-                    animateRotate: true,
-                    animateScale: true
+                    animateScale: true,
+                    animateRotate: true
+                },
+                onHover: function (event, chartElement) {
+                    event.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+                },
+                tooltips: {
+                    enabled: false
+                },
+                hover: {
+                    mode: null
                 }
-            }
+            },
+            plugins: [{
+                afterDatasetsDraw: function (chart, easing) {
+                    var ctx = chart.ctx;
+                    chart.data.datasets.forEach(function (dataset, i) {
+                        var meta = chart.getDatasetMeta(i);
+                        if (!meta.hidden) {
+                            meta.data.forEach(function (element, index) {
+                                var fontSize = 12;
+                                var fontStyle = 'normal';
+                                var fontFamily = 'Helvetica Neue';
+                                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+                                ctx.fillStyle = 'white';
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'middle';
+                                var centerX = (element._model.x + meta.data[index]._model.x) / 2;
+                                var centerY = (element._model.y + meta.data[index]._model.y) / 2;
+                                var percent = dataset.data[index] + '%';
+                                ctx.fillText(percent, centerX, centerY + fontSize);
+                            });
+                        }
+                    });
+                }
+            }]
         });
     });
 </script>
@@ -421,70 +478,55 @@ z-index: 0;
                     display: false
                 },
                 plugins: {
+                    legend: false,
                     title: {
                         display: true,
                         text: 'Ingeniería',
-                        position: 'center',
-                        align: 'center',
-                        color: '#FFFFFF',
-                        font: {
-                            size: 14,
-                            weight: 'bold'
-                        }
+                        position: 'outside', // Cambiado de 'bottom' a 'outside'
+                        align: 'center'
                     }
                 },
                 animation: {
-                    animateRotate: true,
-                    animateScale: true
+                    animateScale: true,
+                    animateRotate: true
+                },
+                onHover: function (event, chartElement) {
+                    event.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+                },
+                tooltips: {
+                    enabled: false
+                },
+                hover: {
+                    mode: null
                 }
-            }
+            },
+            plugins: [{
+                afterDatasetsDraw: function (chart, easing) {
+                    var ctx = chart.ctx;
+                    chart.data.datasets.forEach(function (dataset, i) {
+                        var meta = chart.getDatasetMeta(i);
+                        if (!meta.hidden) {
+                            meta.data.forEach(function (element, index) {
+                                var fontSize = 12;
+                                var fontStyle = 'normal';
+                                var fontFamily = 'Helvetica Neue';
+                                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+                                ctx.fillStyle = 'white';
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'middle';
+                                var centerX = (element._model.x + meta.data[index]._model.x) / 2;
+                                var centerY = (element._model.y + meta.data[index]._model.y) / 2;
+                                var percent = dataset.data[index] + '%';
+                                ctx.fillText(percent, centerX, centerY + fontSize);
+                            });
+                        }
+                    });
+                }
+            }]
         });
     });
 </script>
 
-<!-- Script para la gráfica AJC-CISCO -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var ctxAJCCISCO = document.getElementById("chartAJC-CISCO").getContext("2d");
-        var chartAJCCISCO = new Chart(ctxAJCCISCO, {
-            type: "doughnut",
-            data: {
-                labels: ["AJC-CISCO Completado", "Pendiente"],
-                datasets: [{
-                    data: [100, 0],
-                    backgroundColor: ["rgb(113, 230, 240)", "#1e1f26"],
-                    borderColor: "#1e1f26",
-                    borderWidth: 2.5
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: 70,
-                legend: {
-                    display: false
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'AJC-CISCO',
-                        position: 'center',
-                        align: 'center',
-                        color: '#FFFFFF',
-                        font: {
-                            size: 14,
-                            weight: 'bold'
-                        }
-                    }
-                },
-                animation: {
-                    animateRotate: true,
-                    animateScale: true
-                }
-            }
-        });
-    });
-</script>
 
     
     <div id="particles-js"></div>
