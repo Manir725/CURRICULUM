@@ -251,9 +251,23 @@ z-index: 0;
     </section>
 
         
+<!-- Sección de diplomas -->
 <section id="tab-Diplomas" class="slider">
     <h1 style="margin-bottom: 60px;">DIPLOMAS</h1>
     <h2 style="margin-bottom: 60px;">Coloca el pulsador sobre uno:</h2>
+
+    <style>
+        .diploma-image {
+            margin: 20px; /* Margen de 20px alrededor de cada imagen */
+            width: calc(33.33% - 36px); /* 33.33% de ancho con un espacio de 16px entre imágenes */
+            height: auto;
+            transition: transform 0.3s ease-in-out; /* Efecto de transición suave al hacer hover */
+        }
+
+        .diploma-image:hover {
+            transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
+        }
+    </style>
 
     <div class="gallery">
         <img src="images/Certs/EJPT_MANUEL_ALISES_NÚÑEZ.jpg" alt="Diploma 1" class="diploma-image">
