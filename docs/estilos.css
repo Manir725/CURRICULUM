@@ -169,19 +169,16 @@ ul li {
   right: 0;
   z-index: auto;
 }
-/* Estilo para los enlaces debajo de las fotos en la sección de contacto */
-#tab-contacto .contact-links {
+#tab-contacto .contacto-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px; /* Ajusta el espacio entre los enlaces según sea necesario */
+    gap: 20px;
 }
 
-#tab-contacto .contact-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px; /* Ajusta el tamaño del texto según sea necesario */
+#tab-contacto .contacto-item {
+    text-align: center;
 }
 
 
@@ -226,15 +223,19 @@ ul li {
     gap: 10px; /* Ajusta el espacio entre las fotos según sea necesario */
 }
 
+/* Estilo para las imágenes de los diplomas */
 #tab-diplomas .diploma-image {
-    margin: 20px;
-    width: 220px;
+  margin: 20px;
+  width: 220px;
+  transition: transform 0.9s; /* Agrega una transición suave */
 }
 
+/* Escala la imagen al pasar el ratón sobre ella */
 #tab-Diplomas .diploma-image:hover {
-    transform: scale(1.1);
     cursor: pointer;
+    transform: scale(1.2); /* Puedes ajustar el factor de escala según tus preferencias */
 }
+
 
 @media (min-width: 800px) {
     #tab-Diplomas .gallery {
