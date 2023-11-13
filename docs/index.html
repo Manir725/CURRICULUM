@@ -48,7 +48,7 @@ nav.nav-container {
             margin-bottom: 0 !important;
         }
 #tab-publicaciones {
-    margin-top: 750px !important;
+    margin-top: 690px !important;
     margin-bottom: 600px !important;
 }
 #tab-progreso {
@@ -381,33 +381,15 @@ nav.nav-container {
     </script>
 
 
-
-
-
-<!-- Script para la gráfica B2 Inglés -->
-<script>
-    var ctxB2Ingles = document.getElementById("chartB2-Ingles").getContext("2d");
-    var chartB2Ingles = new Chart(ctxB2Ingles, {
-        type: "doughnut",
-        data: {
-            labels: ["B2 Inglés Completado", "Pendiente"],
-            datasets: [{
-                data: [60, 40],
-                backgroundColor: ["#4fff7e", "#1e1f26"],
-                borderColor: "#1e1f26",
-                borderWidth: 2.5
-            }]
-        },
-        options: {
+    <script>
+        // Opciones comunes para todas las gráficas
+        var commonOptions = {
             responsive: true,
             maintainAspectRatio: false,
             cutout: 70,
-            legend: false,
             plugins: {
+                legend: false,
                 datalabels: {
-                    color: '#fff',
-                    align: 'center',  // Alinea el texto en el centro
-                    anchor: 'center', // Ancla el texto en el centro
                     formatter: (value, ctx) => {
                         let sum = 0;
                         let dataArr = ctx.chart.data.datasets[0].data;
@@ -417,27 +399,46 @@ nav.nav-container {
                         let percentage = (value * 100 / sum).toFixed(2) + "%";
                         return percentage;
                     },
+                    color: '#fff',
                     labels: {
                         title: {
                             font: {
                                 size: '16',
-                                color: '#fff' // Color blanco para el título
-                            }
-                        }
-                    }
-                }
+                            },
+                        },
+                    },
+                },
             },
-            title: {
-                display: true,
-                text: 'B2 Inglés', // Título de la gráfica
-                position: 'center', // Posiciona el título en el centro
-                fontColor: '#fff', // Color blanco para el título
-                fontSize: 18,
-                padding: 20,
-            }
-        }
-    });
-</script>
+        };
+
+        // Configuración de la gráfica eJPTv2
+        var ctxB2Ingles = document.getElementById("chartB2-Ingles").getContext("2d");
+        var chartB2Ingles = new Chart(ctxB2Ingles, {
+            type: "doughnut",
+            data: datab2Ingles,
+            options: {
+                ...commonOptions, // Se utilizan opciones comunes
+                title: {
+                    display: true,
+                    text: 'B2-Ingles', // Puedes cambiar el título según sea necesario
+                    position: 'center',
+                    align: 'center',
+                    fontStyle: 'bold',
+                    color: '#fff',
+                    fontSize: 18,
+                    padding: 20,
+                                labels: ["B2 Inglés Completado", "Pendiente"],
+            datasets: [{
+                data: [60, 40],
+                backgroundColor: ["#4fff7e", "#1e1f26"],
+                borderColor: "#1e1f26",
+                borderWidth: 2.5
+            }]
+                },
+            },
+        });
+    </script>
+
 
 <!-- Script para la gráfica AJC-CISCO -->
 <script>
