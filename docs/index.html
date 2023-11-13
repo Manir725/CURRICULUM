@@ -307,9 +307,8 @@ z-index: 0;
     </main>
 
 
-<!-- Agrega estos bloques de código para cada gráfico -->
+<!-- Script para la gráfica eJPTv2 -->
 <script>
-    // Gráfico eJPTv2
     var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
     var chartEJPTv2 = new Chart(ctxEJPTv2, {
         type: "doughnut",
@@ -326,14 +325,17 @@ z-index: 0;
             responsive: true,
             maintainAspectRatio: false,
             cutout: 70, // Valor que determina el radio del círculo interno
-            legend: false,
-            title: {
-                display: true,
-                text: 'eJPTv2',
-                position: 'bottom',
-                align: 'center'
-            },
             plugins: {
+                legend: false,
+                title: {
+                    display: true,
+                    text: 'eJPTv2',
+                    position: 'bottom',
+                    align: 'center',
+                    fontStyle: 'bold',
+                    fontSize: 18,
+                    padding: 20,
+                },
                 datalabels: {
                     formatter: (value, ctx) => {
                         let sum = 0;
@@ -348,17 +350,16 @@ z-index: 0;
                     labels: {
                         title: {
                             font: {
-                                size: '16'
-                            }
-                        }
-                    }
-                }
-            }
-        }
+                                size: '16',
+                            },
+                        },
+                    },
+                },
+            },
+        },
     });
-
-    // Repite este bloque para cada gráfico
 </script>
+
 
 
 
@@ -381,11 +382,8 @@ z-index: 0;
             responsive: true,
             maintainAspectRatio: false,
             cutout: 70, // Valor que determina el radio del círculo interno
-            legend: {
-                display: false
-            },
+            legend: false,
             plugins: {
-                legend: false,
                 title: {
                     display: true,
                     text: 'B2 Inglés',
@@ -396,6 +394,7 @@ z-index: 0;
         }
     });
 </script>
+
 
 <!-- Script para la gráfica Ingeniería -->
 <script>
