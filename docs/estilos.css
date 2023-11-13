@@ -431,6 +431,27 @@ ul li {
 .btn:hover {
   background-color: rgb(154, 30, 165);
 }
+/* Estilos para la caja de descarga del currículum */
+#download-box {
+  border: 2px solid #ffffff; /* Borde blanco */
+  padding: 20px; /* Espaciado interno */
+  margin: 20px 0; /* Espaciado externo */
+  text-align: center; /* Centra el contenido */
+}
+
+#download-button {
+  background-color: rgb(14, 125, 161);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 13px 25px;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+
+#download-button:hover {
+  background-color: rgb(154, 30, 165);
+}
 
 /* Agregar estilos específicos para tabletas y móviles */
 @media (max-width: 1024px) {
