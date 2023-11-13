@@ -316,7 +316,7 @@ nav.nav-container {
     </main>
 
 
-    <script>
+  <script>
         // Función para obtener opciones comunes de la gráfica
         function obtenerOpcionesGrafica(titulo) {
             return {
@@ -341,6 +341,11 @@ nav.nav-container {
                                 font: {
                                     size: '16'
                                 }
+                            },
+                            value: {
+                                color: '#fff',
+                                fontSize: '16',
+                                position: 'inside'
                             }
                         }
                     }
@@ -359,22 +364,53 @@ nav.nav-container {
 
         // Scripts para las gráficas específicas
         document.addEventListener('DOMContentLoaded', function() {
-            var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
-            var chartEJPTv2 = new Chart(ctxEJPTv2, {
+            // Gráfica de Ingeniería
+            var ctxIngenieria = document.getElementById("chartIngeniería").getContext("2d");
+            var chartIngenieria = new Chart(ctxIngenieria, {
                 type: "doughnut",
                 data: {
-                    labels: ["eJPTv2 Completado", "Pendiente"],
+                    labels: ["Ingeniería Completado", "Pendiente"],
                     datasets: [{
-                        data: [100, 0],
-                        backgroundColor: ["#d08dfc", "#1e1f26"],
+                        data: [75, 25],
+                        backgroundColor: ["#FFCE56", "#1e1f26"],
                         borderColor: "#1e1f26",
                         borderWidth: 2.5
                     }]
                 },
-                options: obtenerOpcionesGrafica("eJPTv2")
+                options: obtenerOpcionesGrafica("Ingeniería")
             });
 
-            // Repite lo mismo para las otras gráficas...
+            // Gráfica de AJC-CISCO
+            var ctxAJCCISCO = document.getElementById("chartAJC-CISCO").getContext("2d");
+            var chartAJCCISCO = new Chart(ctxAJCCISCO, {
+                type: "doughnut",
+                data: {
+                    labels: ["AJC-CISCO Completado", "Pendiente"],
+                    datasets: [{
+                        data: [100, 0],
+                        backgroundColor: ["#36A2EB", "#1e1f26"],
+                        borderColor: "#1e1f26",
+                        borderWidth: 2.5
+                    }]
+                },
+                options: obtenerOpcionesGrafica("AJC-CISCO")
+            });
+
+            // Gráfica de B2 Inglés
+            var ctxB2Ingles = document.getElementById("chartB2-Ingles").getContext("2d");
+            var chartB2Ingles = new Chart(ctxB2Ingles, {
+                type: "doughnut",
+                data: {
+                    labels: ["B2 Inglés Completado", "Pendiente"],
+                    datasets: [{
+                        data: [60, 40],
+                        backgroundColor: ["#4CAF50", "#1e1f26"],
+                        borderColor: "#1e1f26",
+                        borderWidth: 2.5
+                    }]
+                },
+                options: obtenerOpcionesGrafica("B2 Inglés")
+            });
         });
     </script>
 
