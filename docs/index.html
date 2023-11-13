@@ -395,50 +395,39 @@ z-index: 0;
         options: {
             responsive: true,
             maintainAspectRatio: false,
-            cutout: 70, // Valor que determina el radio del círculo interno
+            cutout: 70,
             legend: false,
             plugins: {
-                title: {
-                    display: true,
-                    text: 'B2 Inglés',
-                    position: 'bottom',
-                    align: 'center'
+                datalabels: {
+                    color: '#fff',
+                    align: 'center',  // Alinea el texto en el centro
+                    anchor: 'center', // Ancla el texto en el centro
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value * 100 / sum).toFixed(2) + "%";
+                        return percentage;
+                    },
+                    labels: {
+                        title: {
+                            font: {
+                                size: '16',
+                                color: '#fff' // Color blanco para el título
+                            }
+                        }
+                    }
                 }
-            }
-        }
-    });
-</script>
-
-
-<!-- Script para la gráfica Ingeniería -->
-<script>
-    var ctxIngenieria = document.getElementById("chartIngeniería").getContext("2d");
-    var chartIngenieria = new Chart(ctxIngenieria, {
-        type: "doughnut",
-        data: {
-            labels: ["Ingeniería Completado", "Pendiente"],
-            datasets: [{
-                data: [75, 25],
-                backgroundColor: ["#8599ff", "#1e1f26"],
-                borderColor: "#1e1f26",
-                borderWidth: 2.5
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            cutout: 70, // Valor que determina el radio del círculo interno
-            legend: {
-                display: false
             },
-            plugins: {
-                legend: false,
-                title: {
-                    display: true,
-                    text: 'Ingeniería',
-                    position: 'bottom',
-                    align: 'center'
-                }
+            title: {
+                display: true,
+                text: 'B2 Inglés', // Título de la gráfica
+                position: 'center', // Posiciona el título en el centro
+                fontColor: '#fff', // Color blanco para el título
+                fontSize: 18,
+                padding: 20,
             }
         }
     });
