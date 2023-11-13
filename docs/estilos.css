@@ -215,27 +215,27 @@ ul li {
     padding: 20px;
 }
 
-/* Agrega este bloque en tu sección de estilos */
-<style>
-    .diplomas-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        margin: 20px 0;
-    }
+/* Añade estos estilos a tu sección de estilo CSS */
 
-    .diploma-image {
-        width: 220px;
-        height: auto;
-        transition: transform 0.3s; /* Agrega una transición suave para la interactividad */
-        cursor: pointer;
-    }
+.diplomas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-    .diploma-image:hover {
-        transform: scale(1.2); /* Ajusta la escala según tu preferencia */
-    }
-</style>
+.diploma-image {
+    width: 220px;
+    height: auto;
+    margin: 0;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.diploma-image:hover {
+    transform: scale(1.2);
+}
+
 
 
 
