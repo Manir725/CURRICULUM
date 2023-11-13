@@ -212,25 +212,25 @@ ul li {
 }
 
 #tab-Diplomas .diploma-image {
-    width: calc((100% / 6) - 10px); /* Ancho de las imágenes para la primera fila */
-    height: 150px; /* Ajusta la altura de las imágenes según tus necesidades */
+    width: 220px; /* Ancho de las imágenes para la primera fila */
+    height: 220px; /* Ajusta la altura de las imágenes según tus necesidades */
     object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
     transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de escala */
 }
 
 @media (min-width: 800px) {
     #tab-Diplomas .diploma-image {
-        width: calc((100% / 6) - 20px); /* Ajusta el ancho de las imágenes para la primera fila en pantallas más grandes */
+        width: 220px; /* Ajusta el ancho de las imágenes para la primera fila en pantallas más grandes */
     }
 }
 
 #tab-Diplomas .diploma-image:nth-child(n+7) {
-    width: calc((100% / 5) - 10px); /* Ancho de las imágenes para la segunda fila */
+    width:220px; /* Ancho de las imágenes para la segunda fila */
 }
 
 @media (min-width: 800px) {
     #tab-Diplomas .diploma-image:nth-child(n+7) {
-        width: calc((100% / 5) - 20px); /* Ajusta el ancho de las imágenes para la segunda fila en pantallas más grandes */
+        width: 220px; /* Ajusta el ancho de las imágenes para la segunda fila en pantallas más grandes */
     }
 }
 
