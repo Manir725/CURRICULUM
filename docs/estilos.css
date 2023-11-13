@@ -246,6 +246,7 @@ ul li {
   transform: scale(1.5);
 }
 
+
 @media (min-width: 800px) {
   #tab-Diplomas .gallery {
     margin: 20px;
@@ -269,152 +270,6 @@ ul li {
   cursor: pointer;
 }
 
-@media (min-width: 800px) {
-  .nav h1,
-  .slider h1 {
-    font-size: 5vw;
-  }
-
-  .nav h2,
-  .slider h2 {
-    font-size: 3vw;
-  }
-
-  .nav-tab {
-    font-size: 3vw;
-  }
-}
-
-@media screen only (min-width: 360px) {
-  .nav h1,
-  .slider h1 {
-    font-size: 8vw;
-  }
-
-  .nav h2,
-  .slider h2 {
-    font-size: 2vw;
-    letter-spacing: 0.2vw;
-  }
-
-  .nav-tab {
-    font-size: 1.2vw;
-  }
-}
-
-.background {
-  position: absolute;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-}
-
-.loader span {
-  color: #faebd7;
-  text-shadow: 0 0 0 #faebd7;
-  -webkit-animation: loading 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes loading {
-  to {
-    text-shadow: 20px 0 70px #ff0266;
-    color: #ff0266;
-  }
-}
-
-.loader span:nth-child(2) {
-  -webkit-animation-delay: 0.1s;
-}
-
-.loader span:nth-child(3) {
-  -webkit-animation-delay: 0.2s;
-}
-
-.loader span:nth-child(4) {
-  -webkit-animation-delay: 0.3s;
-}
-
-.loader span:nth-child(5) {
-  -webkit-animation-delay: 0.4s;
-}
-
-.loader span:nth-child(6) {
-  -webkit-animation-delay: 0.5s;
-}
-
-.loader span:nth-child(7) {
-  -webkit-animation-delay: 0.6s;
-}
-
-.loader span:nth-child(8) {
-  -webkit-animation-delay: 0.7s;
-}
-
-.loader span:nth-child(9) {
-  -webkit-animation-delay: 0.8s;
-}
-
-.loader span:nth-child(10) {
-  -webkit-animation-delay: 0.9s;
-}
-
-.loader span:nth-child(11) {
-  -webkit-animation-delay: 1s;
-}
-
-.loader span:nth-child(12) {
-  -webkit-animation-delay: 1.1s;
-}
-
-.loader span:nth-child(13) {
-  -webkit-animation-delay: 1.2s;
-}
-
-.loader span:nth-child(14) {
-  -webkit-animation-delay: 1.3s;
-}
-
-.loader span:nth-child(15) {
-  -webkit-animation-delay: 1.4s;
-}
-
-.loader span:nth-child(16) {
-  -webkit-animation-delay: 1.5s;
-}
-
-.loader span:nth-child(17) {
-  -webkit-animation-delay: 1.6s;
-}
-
-.loader span:nth-child(18) {
-  -webkit-animation-delay: 1.7s;
-}
-
-.loader span:nth-child(19) {
-  -webkit-animation-delay: 1.8s;
-}
-
-.loader span:nth-child(20) {
-  -webkit-animation-delay: 1.9s;
-}
-
-.loader span:nth-child(21) {
-  -webkit-animation-delay: 2s;
-}
-
-.loader span:nth-child(22) {
-  -webkit-animation-delay: 2.1s;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
 
 .btn {
   display: inline-block;
@@ -444,19 +299,6 @@ ul li {
   margin: 300px 0; /* Espaciado externo */
   text-align: center; /* Centra el contenido */
 }
-#download-button {
-  background-color: rgb(14, 125, 161);
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 93px 95px;
-  justify-content: center;
-  align-items: center;
-  display: inline-block;
-}
-
-#download-button:hover {
-  background-color: rgb(154, 30, 165);
-}
 
 /* Agregar estilos específicos para tabletas y móviles */
 @media (max-width: 1024px) {
@@ -471,20 +313,18 @@ ul li {
     letter-spacing: 0.15vw;
   }
 
-  .nav-tab {
-    font-size: 1.8vw;
+  h1:hover,
+  h4:hover {
+    transform: translate3d(0, -8px, 18px);
   }
 
-  /* Ajustes para el botón y el contenido en tamaños de pantalla más pequeños */
-  .btn {
-    padding: 20px 40px;
+  h4 {
+    font-size: 36px;
   }
 
-  .content {
-    margin: 30px;
-  }
-    .diploma-image {
-    width: 250px; /* Ajusta el tamaño para pantallas más pequeñas */
+  .progress-chart .title,
+  .progress-chart .percentage {
+    font-size: 18px;
   }
 }
 
@@ -500,19 +340,18 @@ ul li {
     letter-spacing: 0.2vw;
   }
 
-  .nav-tab {
-    font-size: 1.5vw;
+  h1:hover,
+  h4:hover {
+    transform: translate3d(0, -6px, 14px);
   }
 
-  .btn {
-    padding: 15px 30px;
+  h4 {
+    font-size: 32px;
   }
 
-  .content {
-    margin: 20px;
-  }
-    .diploma-image {
-    width: 200px; /* Ajusta el tamaño para pantallas más pequeñas */
+  .progress-chart .title,
+  .progress-chart .percentage {
+    font-size: 16px;
   }
 }
 
@@ -528,18 +367,17 @@ ul li {
     letter-spacing: 0.3vw;
   }
 
-  .nav-tab {
-    font-size: 2vw;
+  h1:hover,
+  h4:hover {
+    transform: translate3d(0, -4px, 10px);
   }
 
-  .btn {
-    padding: 10px 20px;
+  h4 {
+    font-size: 28px;
   }
 
-  .content {
-    margin: 10px;
-  }
-    .diploma-image {
-    width: 150px; /* Ajusta el tamaño para pantallas más pequeñas */
+  .progress-chart .title,
+  .progress-chart .percentage {
+    font-size: 14px;
   }
 }
