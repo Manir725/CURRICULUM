@@ -381,64 +381,23 @@ nav.nav-container {
     </script>
 
 
-    <script>
-        // Opciones comunes para todas las gráficas
-        var commonOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
-            cutout: 70,
-            plugins: {
-                legend: false,
-                datalabels: {
-                    formatter: (value, ctx) => {
-                        let sum = 0;
-                        let dataArr = ctx.chart.data.datasets[0].data;
-                        dataArr.map(data => {
-                            sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(2) + "%";
-                        return percentage;
-                    },
-                    color: '#fff',
-                    labels: {
-                        title: {
-                            font: {
-                                size: '16',
-                            },
-                        },
-                    },
-                },
-            },
-        };
-
-        // Configuración de la gráfica eJPTv2
-        var ctxB2Ingles = document.getElementById("chartB2-Ingles").getContext("2d");
-        var chartB2Ingles = new Chart(ctxB2Ingles, {
-            type: "doughnut",
-            data: datab2Ingles,
-            options: {
-                ...commonOptions, // Se utilizan opciones comunes
-                title: {
-                    display: true,
-                    text: 'B2-Ingles', // Puedes cambiar el título según sea necesario
-                    position: 'center',
-                    align: 'center',
-                    fontStyle: 'bold',
-                    color: '#fff',
-                    fontSize: 18,
-                    padding: 20,
-                                labels: ["B2 Inglés Completado", "Pendiente"],
+    <!-- Script para la gráfica Ingeniería -->
+<script>
+    var ctxIngenieria = document.getElementById("chartIngeniería").getContext("2d");
+    var chartIngenieria = new Chart(ctxIngenieria, {
+        type: "doughnut",
+        data: {
+            labels: ["Ingeniería Completado", "Pendiente"],
             datasets: [{
-                data: [60, 40],
-                backgroundColor: ["#4fff7e", "#1e1f26"],
+                data: [75, 25],
+                backgroundColor: ["#FFCE56", "#1e1f26"],
                 borderColor: "#1e1f26",
                 borderWidth: 2.5
             }]
-                },
-            },
-        });
-    </script>
-
+        },
+        options: obtenerOpcionesGrafica("Ingeniería")
+    });
+</script>
 
 <!-- Script para la gráfica AJC-CISCO -->
 <script>
@@ -449,61 +408,51 @@ nav.nav-container {
             labels: ["AJC-CISCO Completado", "Pendiente"],
             datasets: [{
                 data: [100, 0],
-                backgroundColor: ["rgb(113, 230, 240)", "#1e1f26"],
+                backgroundColor: ["#36A2EB", "#1e1f26"],
                 borderColor: "#1e1f26",
                 borderWidth: 2.5
             }]
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            cutout: 70, // Valor que determina el radio del círculo interno
-            legend: {
-                display: false
-            },
-            plugins: {
-                legend: false,
-                title: {
-                    display: true,
-                    text: 'AJC-CISCO',
-                    position: 'center',
-                    align: 'center'
-                }
-            }
-        }
+        options: obtenerOpcionesGrafica("AJC-CISCO")
     });
 </script>
 
-
-        
-<!-- Agrega estos bloques de código para cada gráfico -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-
+<!-- Script para la gráfica B2 Inglés -->
 <script>
-    // Gráfico eJPTv2
-    var ctxEJPTv2 = document.getElementById("chartEJPTv2").getContext("2d");
-    var chartEJPTv2 = new Chart(ctxEJPTv2, {
+    var ctxB2Ingles = document.getElementById("chartB2-Ingles").getContext("2d");
+    var chartB2Ingles = new Chart(ctxB2Ingles, {
         type: "doughnut",
         data: {
-            labels: ["eJPTv2 Completado", "Pendiente"],
+            labels: ["B2 Inglés Completado", "Pendiente"],
             datasets: [{
-                data: [100, 0],
-                backgroundColor: ["#d08dfc", "#1e1f26"],
+                data: [60, 40],
+                backgroundColor: ["#4CAF50", "#1e1f26"],
                 borderColor: "#1e1f26",
                 borderWidth: 2.5
             }]
         },
-        options: {
+        options: obtenerOpcionesGrafica("B2 Inglés")
+    });
+</script>
+
+<!-- Otras gráficas -->
+
+<!-- Función para obtener opciones comunes de la gráfica -->
+<script>
+    function obtenerOpcionesGrafica(titulo) {
+        return {
             responsive: true,
             maintainAspectRatio: false,
-            cutout: 70, // Valor que determina el radio del círculo interno
+            cutout: 70,
             legend: false,
             title: {
                 display: true,
-                text: 'eJPTv2',
+                text: titulo,
                 position: 'bottom',
-                align: 'center'
+                align: 'center',
+                fontStyle: 'bold',
+                fontSize: 18,
+                padding: 20,
             },
             plugins: {
                 datalabels: {
@@ -525,11 +474,9 @@ nav.nav-container {
                         }
                     }
                 }
-            }
-        }
-    });
-
-    // Repite este bloque para cada gráfico
+            },
+        };
+    }
 </script>
 
 
