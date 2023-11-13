@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Usar min-height en lugar de height */
   position: relative;
   background-color: #1e1f26;
   text-align: center;
@@ -64,7 +64,7 @@ h1:hover {
 #tab-publicaciones,
 #tab-contacto,
 #tab-progreso {
-  height: 200vh;
+  min-height: 200vh; /* Usar min-height en lugar de height */
   background-color: #1e1f26;
 }
 
@@ -237,7 +237,7 @@ ul li {
 }
 
 .diploma-image {
-  width: 320px;
+  max-width: 100%; /* Para que las imágenes sean responsivas */
   height: auto;
   transition: transform 0.2s ease-in-out;
 }
@@ -282,23 +282,6 @@ ul li {
 
   .nav-tab {
     font-size: 3vw;
-  }
-}
-
-@media screen only (min-width: 360px) {
-  .nav h1,
-  .slider h1 {
-    font-size: 8vw;
-  }
-
-  .nav h2,
-  .slider h2 {
-    font-size: 2vw;
-    letter-spacing: 0.2vw;
-  }
-
-  .nav-tab {
-    font-size: 1.2vw;
   }
 }
 
@@ -468,12 +451,11 @@ ul li {
 }
 
 .btn {
-  /* Los estilos existentes para el botón */
   display: inline-block;
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 23px 25px; /* Se redujo 30px a cada lado */
+  padding: 23px 25px; 
   margin-top: 35px;
   margin-bottom: 62px;
   justify-content: center;
@@ -485,17 +467,17 @@ ul li {
 }
 
 #download-box {
-  border: 2px solid #ffffff; /* Borde blanco */
-  padding: 100px; /* Espaciado interno */
-  margin: 100px 0; /* Espaciado externo */
-  text-align: center; /* Centra el contenido */
+  border: 2px solid #ffffff;
+  padding: 70px;
+  margin: 70px 0;
+  text-align: center;
 }
 
 #download-button {
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 23px 25px; /* Se redujo 30px a cada lado */
+  padding: 23px 25px; 
   justify-content: center;
   align-items: center;
   display: inline-block;
