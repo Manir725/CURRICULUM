@@ -171,13 +171,6 @@ ul li {
 }
 /* Estilos adicionales para la sección de progreso */
 
-#tab-progreso .progress-chart-container {
-    display: flex;
-    gap: 50px;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
 #tab-progreso .progress-chart {
     position: relative;
     text-align: center;
@@ -193,11 +186,25 @@ ul li {
 }
 
 #tab-progreso .progress-chart .title {
-    font-size: 18px; /* Tamaño de la fuente del título */
+    font-size: 20px; /* Tamaño de la fuente del título (2px más grande) */
 }
 
 #tab-progreso .progress-chart .percentage {
-    font-size: 24px; /* Tamaño de la fuente del porcentaje */
+    font-size: 26px; /* Tamaño de la fuente del porcentaje (2px más grande) */
+    font-weight: bold; /* Texto en negrita para el porcentaje */
+}
+
+/* Estilos específicos para cada gráfica */
+#tab-progreso .progress-chart:nth-child(2) .progress-chart-bar-fill {
+    background-color: green; /* Nuevo color para la segunda gráfica */
+}
+
+#tab-progreso .progress-chart:nth-child(3) .progress-chart-bar-fill {
+    background-color: #ff66b2; /* Nuevo color para la tercera gráfica (rosa) */
+}
+
+#tab-progreso .progress-chart:nth-child(4) .progress-chart-bar-fill {
+    background-color: purple; /* Nuevo color para la cuarta gráfica */
 }
 
 #tab-Diplomas {
