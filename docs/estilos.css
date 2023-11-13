@@ -220,6 +220,8 @@ ul li {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 20px;
+    width: 220px;
     gap: 10px; /* Ajusta el espacio entre las fotos según sea necesario */
 }
 
@@ -233,12 +235,16 @@ ul li {
 /* Escala la imagen al pasar el ratón sobre ella */
 #tab-Diplomas .diploma-image:hover {
     cursor: pointer;
+    margin: 20px;
+    width: 220px;
     transform: scale(1.2); /* Puedes ajustar el factor de escala según tus preferencias */
 }
 
 
 @media (min-width: 800px) {
     #tab-Diplomas .gallery {
+        margin: 20px;
+        width: 220px;
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     }
 }
@@ -246,12 +252,14 @@ ul li {
 
 
 #tab-Diplomas .diploma-image:nth-child(n+7) {
-  width: 100%; /* Cambiado de width: calc(20% - 10px); */
+  margin: 20px;
+  width: 220px;
 }
 
 @media (min-width: 800px) {
   #tab-Diplomas .diploma-image:nth-child(n+7) {
-    width: 100%; /* Cambiado de width: calc(20% - 10px); */
+  margin: 20px;
+  width: 220px;
   }
 }
 
