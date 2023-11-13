@@ -215,30 +215,28 @@ ul li {
     padding: 20px;
 }
 
-#tab-diplomas .diplomas-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px;
-    width: 220px;
-    gap: 10px; /* Ajusta el espacio entre las fotos según sea necesario */
-}
+/* Agrega este bloque en tu sección de estilos */
+<style>
+    .diplomas-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
+    }
 
-/* Estilo para las imágenes de los diplomas */
-#tab-diplomas .diploma-image {
-  margin: 20px;
-  width: 220px;
-  transition: transform 0.9s; /* Agrega una transición suave */
-}
+    .diploma-image {
+        width: 220px;
+        height: auto;
+        transition: transform 0.3s; /* Agrega una transición suave para la interactividad */
+        cursor: pointer;
+    }
 
-/* Escala la imagen al pasar el ratón sobre ella */
-#tab-Diplomas .diploma-image:hover {
-    cursor: pointer;
-    margin: 20px;
-    width: 220px;
-    transform: scale(1.2); /* Puedes ajustar el factor de escala según tus preferencias */
-}
+    .diploma-image:hover {
+        transform: scale(1.2); /* Ajusta la escala según tu preferencia */
+    }
+</style>
+
 
 
 @media (min-width: 800px) {
