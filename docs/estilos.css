@@ -194,30 +194,19 @@ ul li {
     font-weight: bold; /* Texto en negrita para el porcentaje */
 }
 
-/* Estilos específicos para cada gráfica */
-#tab-progreso .progress-chart:nth-child(2) .progress-chart-bar-fill {
-    background-color: green; /* Nuevo color para la segunda gráfica */
-}
 
-#tab-progreso .progress-chart:nth-child(3) .progress-chart-bar-fill {
-    background-color: #ff66b2; /* Nuevo color para la tercera gráfica (rosa) */
-}
-
-#tab-progreso .progress-chart:nth-child(4) .progress-chart-bar-fill {
-    background-color: purple; /* Nuevo color para la cuarta gráfica */
-}
 
 #tab-Diplomas {
     /* Ajusta según sea necesario */
     padding: 20px;
 }
-.gallery {
+#tab-Diplomas .gallery {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px; /* Ajusta este valor según sea necesario */
 }
 
-.diploma-image {
+#tab-Diplomas .diploma-image {
     width: 100%; /* Ajusta el tamaño según sea necesario */
 }
 /* Estilos adicionales para la sección de diplomas */
