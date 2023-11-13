@@ -218,18 +218,17 @@ ul li {
     padding: 20px;
 }
 
-#tab-Diplomas .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 16px; /* Ajusta este valor según sea necesario */
-    margin: 20px; /* Ajusta el margen izquierdo y derecho según sea necesario */
+#tab-diplomas .diplomas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Ajusta el espacio entre las fotos según sea necesario */
 }
 
-#tab-Diplomas .diploma-image {
-    width: 100%;
-    height: auto; /* Cambiado a 'auto' para mantener la proporción original */
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+#tab-diplomas .diploma-image {
+    margin: 20px;
+    width: 220px;
 }
 
 #tab-Diplomas .diploma-image:hover {
