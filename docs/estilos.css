@@ -204,31 +204,41 @@ ul li {
     /* Ajusta según sea necesario */
     padding: 20px;
 }
-
-
-/* Estilos adicionales para la sección de diplomas */
 /* Estilos adicionales para la sección de diplomas */
 #tab-Diplomas .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #tab-Diplomas .diploma-image {
-  width: calc((100% / 6) - 10px); /* Ajusta el ancho de las imágenes según tus necesidades para la primera fila */
-  height: 150px; /* Ajusta la altura de las imágenes según tus necesidades */
-  object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
-  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de escala */
+    width: calc((100% / 6) - 10px); /* Ancho de las imágenes para la primera fila */
+    height: 150px; /* Ajusta la altura de las imágenes según tus necesidades */
+    object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de escala */
+}
+
+@media (min-width: 800px) {
+    #tab-Diplomas .diploma-image {
+        width: calc((100% / 6) - 20px); /* Ajusta el ancho de las imágenes para la primera fila en pantallas más grandes */
+    }
 }
 
 #tab-Diplomas .diploma-image:nth-child(n+7) {
-  width: calc((100% / 5) - 10px); /* Ajusta el ancho de las imágenes según tus necesidades para la segunda fila */
+    width: calc((100% / 5) - 10px); /* Ancho de las imágenes para la segunda fila */
+}
+
+@media (min-width: 800px) {
+    #tab-Diplomas .diploma-image:nth-child(n+7) {
+        width: calc((100% / 5) - 20px); /* Ajusta el ancho de las imágenes para la segunda fila en pantallas más grandes */
+    }
 }
 
 #tab-Diplomas .diploma-image:hover {
-  transform: scale(1.1); /* Escala la imagen al 110% al pasar el ratón */
-  cursor: pointer; /* Cambia el cursor al pasar el ratón para indicar interactividad */
+    transform: scale(1.1); /* Escala la imagen al 110% al pasar el ratón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón para indicar interactividad */
 }
+
 
 
 @media (min-width: 800px) {
@@ -245,8 +255,6 @@ ul li {
   .nav-tab {
     font-size: 3vw;
   }
-    #tab-Diplomas .container img {
-    width: calc(33.333% - 10px); /* Ancho de las imágenes para pantallas más grandes */
 }
 
 @media screen only (min-width: 360px) {
