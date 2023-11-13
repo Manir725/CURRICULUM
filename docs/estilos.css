@@ -203,35 +203,21 @@ ul li {
 
 #tab-Diplomas .gallery {
     display: grid;
-    grid-template-columns: repeat(6, calc(16.66% - 10px));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Utiliza un enfoque de diseño flexible para las imágenes */
     gap: 16px; /* Ajusta este valor según sea necesario */
     margin: 0 20px; /* Ajusta el margen izquierdo y derecho según sea necesario */
 }
 
 #tab-Diplomas .diploma-image {
     width: 100%; /* Ajusta el tamaño según sea necesario */
-}
-
-#tab-Diplomas .diploma-image {
-    width: calc(16.666% - 10px); /* Ancho de las imágenes para la primera fila (6 diplomas) */
-    height: 220px; /* Ajusta la altura de las imágenes según tus necesidades */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción original */
     object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
     transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de escala */
 }
 
 @media (min-width: 800px) {
     #tab-Diplomas .diploma-image {
-        width: calc(16.666% - 10px); /* Ajusta el ancho de las imágenes para la primera fila en pantallas más grandes */
-    }
-}
-
-#tab-Diplomas .diploma-image:nth-child(n+7) {
-    width: calc(20% - 10px); /* Ancho de las imágenes para la segunda fila (5 diplomas) */
-}
-
-@media (min-width: 800px) {
-    #tab-Diplomas .diploma-image:nth-child(n+7) {
-        width: calc(20% - 10px); /* Ajusta el ancho de las imágenes para la segunda fila en pantallas más grandes */
+        width: 100%; /* Ajusta el ancho de las imágenes para pantallas más grandes */
     }
 }
 
@@ -239,6 +225,7 @@ ul li {
     transform: scale(1.1); /* Escala la imagen al 110% al pasar el ratón */
     cursor: pointer; /* Cambia el cursor al pasar el ratón para indicar interactividad */
 }
+
 
 
 @media (min-width: 800px) {
