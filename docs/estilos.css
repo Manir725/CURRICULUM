@@ -217,24 +217,23 @@ ul li {
 
 /* Añade estos estilos a tu sección de estilo CSS */
 
-.diplomas-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+    .diplomas-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+    }
 
-.diploma-image {
-    width: 250px;
-    height: auto;
-    margin: 30px;
-    transition: transform 0.3s;
-    cursor: pointer;
-}
+    .diploma-image {
+        width: 250px;
+        margin: 20px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
 
-.diploma-image:hover {
-    transform: scale(1.2);
-}
+    .diploma-image:hover {
+        transform: scale(1.3);
+    }
 
 
 
