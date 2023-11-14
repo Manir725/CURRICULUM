@@ -8,6 +8,7 @@ body {
   font-family: "ROBOTO", sans-serif;
 }
 
+@media (max-width: 1024px) {
 .logo-container {
     position: fixed;
     top: 50%;
@@ -246,9 +247,6 @@ ul li {
     transform: scale(1.5);
 }
 
-
-
-
 @media (min-width: 800px) {
     #tab-Diplomas .gallery {
         margin: 20px;
@@ -279,14 +277,6 @@ ul li {
     font-size: 3vw;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -608,3 +598,86 @@ ul li {
   right: 0;
   z-index: auto;
 }
+img {
+  width: 50.00%;
+}
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p,
+span,
+a {
+  font-size: 0.67em;
+}
+  .nav-container,
+.nav-tab {
+  font-size: 0.67em;
+}
+  .btn {
+  font-size: 0.67em;
+}
+  .diploma-image {
+    width: 240px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+img {
+  width: 33.33%;
+}
+.progress-chart-container div {
+  width: 33.33%;
+}
+  
+} 
+
+
+
+
+@media (max-width: 480px) {
+  h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p,
+span,
+a {
+  font-size: 0.5em;
+}
+  .nav-container,
+.nav-tab {
+  font-size: 0.5em;
+}
+  .btn {
+  font-size: 0.5em;
+}
+.diploma-image {
+    width: 170px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+.progress-chart-container div {
+  width: 50.00%;
+}
+
+
+  
+  
+}
+
+
+
+
+  
