@@ -113,18 +113,19 @@ ul li {
   text-align: center;
   margin-bottom: 10px; /* Puedes ajustar el espacio entre elementos de la lista */
 }
+  
 .nav-container {
   display: flex;
   flex-direction: row;
   position: absolute;
   bottom: 0;
-  width: calc(100% - 24px); /* Ajustar el ancho restando 24px en total (12px a la izquierda y 12px a la derecha) */
+  width: 100%;
   height: 75px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   background: #1e1f26;
   z-index: 10;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-  margin: 0 12px; /* Añadir margen de 12px a la izquierda y a la derecha */
+  margin-right: 12px; /* Añadir margen derecho */
 }
 
 .nav-container--top-first {
@@ -621,14 +622,6 @@ span,
 a {
   font-size: 0.67em;
 }
-    h4 {
-    font-size: calc(40px - 6px);
-  }
-
-  ul,
-  li {
-    font-size: calc(16px - 4px);
-  }
   .nav-container,
 .nav-tab {
   font-size: 0.67em;
@@ -644,11 +637,8 @@ a {
 img {
   width: 33.33%;
 }
-    .center img {
-    width: calc(33.33% - 14px);
-  }
 .progress-chart-container div {
-  width: 33.33%;
+  width: 200px;
 }
   
 } 
@@ -668,14 +658,6 @@ span,
 a {
   font-size: 0.5em;
 }
-  h4 {
-    font-size: calc(40px - 9px);
-  }
-
-  ul,
-  li {
-    font-size: calc(16px - 7px);
-  }
   .nav-container,
 .nav-tab {
   font-size: 0.5em;
@@ -688,11 +670,8 @@ a {
     height: auto;
     transition: transform 0.2s ease-in-out;
 }
-      .center img {
-    width: calc(33.33% - 20px);
-  }
 .progress-chart-container div {
-  width: 50.00%;
+  width: 100px;
 }
 
 
