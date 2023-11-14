@@ -752,7 +752,7 @@ a {
   cursor: pointer;
 }
   img {
-  width: 50.00%;
+  width: 200px;
 }
 
   .progress-chart-container div {
@@ -790,7 +790,7 @@ a {
 }
 
 img {
-  width: 33.33%;
+  width: 100px;
 }
 
   .progress-chart-container div {
