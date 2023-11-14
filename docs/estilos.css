@@ -418,9 +418,11 @@ ul li {
 
 .btn:hover {
   background-color: rgb(154, 30, 165);
+}
 /* Estilos para la caja con borde blanco */
 #download-box {
   text-align: center; /* Centra el contenido */
+  margin: 20px; /* Espaciado externo opcional */
 }
 
 .box-with-border {
