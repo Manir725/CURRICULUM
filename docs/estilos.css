@@ -723,6 +723,10 @@ ul li {
 
 
 @media (max-width: 768px) {
+    h1, h2, h3, h4, ul {
+    font-size: calc(5vw - 5px);
+  }
+
   h1,
 h2,
 h3,
@@ -737,11 +741,12 @@ a {
   .btn {
   font-size: 0.5em;
 }
-.diploma-image {
-    width: 240px;
-    height: auto;
+
+    img, .diploma-image {
+    width: 200px !important;
+    height: auto !important;
     transition: transform 0.2s ease-in-out;
-}
+  }
     #tab-Diplomas .diploma-image:hover {
   transform: scale(1.1);
   cursor: pointer;
@@ -749,9 +754,10 @@ a {
   img {
   width: 50.00%;
 }
-.progress-chart-container div {
-  width: 200px;
-}
+
+  .progress-chart-container div {
+    width: 200px;
+  }
   
 } 
 
@@ -759,7 +765,10 @@ a {
 
 
 @media (max-width: 480px) {
-h1,
+    h1, h2, h3, h4, ul {
+    font-size: calc(5vw - 7px);
+  }
+  h1,
 h2,
 h3,
 h4,
@@ -770,12 +779,9 @@ span,
 a {
   font-size: 0.67em;
 }
-  .btn {
-  font-size: 0.67em;
-}
-  .diploma-image {
-    width: 170px;
-    height: auto;
+  img, .diploma-image {
+    width: 100px !important;
+    height: auto !important;
     transition: transform 0.2s ease-in-out;
 }
     #tab-Diplomas .diploma-image:hover {
@@ -786,8 +792,13 @@ a {
 img {
   width: 33.33%;
 }
-.progress-chart-container div {
-  width: 100px;
+
+  .progress-chart-container div {
+    width: 100px;
+  }
+  .btn {
+  font-size: 0.67em;
 }
+
   
 }
