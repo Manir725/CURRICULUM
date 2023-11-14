@@ -124,6 +124,7 @@ ul li {
   background: #1e1f26;
   z-index: 10;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  margin-right: 12px; /* Añadir margen derecho */
 }
 
 .nav-container--top-first {
