@@ -302,57 +302,6 @@ ul li {
   }
 }
 
-@media (max-width: 1024px) {
-  .nav h1,
-  .slider h1 {
-    font-size: 4vw;
-  }
-
-  .nav h2,
-  .slider h2 {
-    font-size: 1.5vw;
-    letter-spacing: 0.15vw;
-  }
-
-  .nav-tab {
-    font-size: 1.8vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav h1,
-  .slider h1 {
-    font-size: 6vw;
-  }
-
-  .nav h2,
-  .slider h2 {
-    font-size: 2vw;
-    letter-spacing: 0.2vw;
-  }
-
-  .nav-tab {
-    font-size: 1.5vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav h1,
-  .slider h1 {
-    font-size: 10vw;
-  }
-
-  .nav h2,
-  .slider h2 {
-    font-size: 3vw;
-    letter-spacing: 0.3vw;
-  }
-
-  .nav-tab {
-    font-size: 2vw;
-  }
-}
-
 .background {
   position: absolute;
   height: 100vh;
@@ -473,7 +422,7 @@ ul li {
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 23px 25px; /* Se redujo 30px a cada lado */
+  padding: 13px 25px;
   margin-top: 35px;
   margin-bottom: 62px;
   justify-content: center;
@@ -483,19 +432,18 @@ ul li {
 .btn:hover {
   background-color: rgb(154, 30, 165);
 }
-
+/* Estilos para la caja de descarga del currículum */
 #download-box {
   border: 2px solid #ffffff; /* Borde blanco */
   padding: 100px; /* Espaciado interno */
   margin: 100px 0; /* Espaciado externo */
   text-align: center; /* Centra el contenido */
 }
-
 #download-button {
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 23px 25px; /* Se redujo 30px a cada lado */
+  padding: 53px 55px;
   justify-content: center;
   align-items: center;
   display: inline-block;
@@ -503,4 +451,56 @@ ul li {
 
 #download-button:hover {
   background-color: rgb(154, 30, 165);
+}
+
+/* Agregar estilos específicos para tabletas y móviles */
+@media (max-width: 1024px) {
+  .nav h1,
+  .slider h1 {
+    font-size: 4vw;
+  }
+
+  .nav h2,
+  .slider h2 {
+    font-size: 1.5vw;
+    letter-spacing: 0.15vw;
+  }
+
+  .nav-tab {
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav h1,
+  .slider h1 {
+    font-size: 6vw;
+  }
+
+  .nav h2,
+  .slider h2 {
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+  }
+
+  .nav-tab {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav h1,
+  .slider h1 {
+    font-size: 10vw;
+  }
+
+  .nav h2,
+  .slider h2 {
+    font-size: 3vw;
+    letter-spacing: 0.3vw;
+  }
+
+  .nav-tab {
+    font-size: 2vw;
+  }
 }
