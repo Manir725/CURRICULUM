@@ -621,6 +621,14 @@ span,
 a {
   font-size: 0.67em;
 }
+    h4 {
+    font-size: calc(40px - 6px);
+  }
+
+  ul,
+  li {
+    font-size: calc(16px - 4px);
+  }
   .nav-container,
 .nav-tab {
   font-size: 0.67em;
@@ -636,6 +644,9 @@ a {
 img {
   width: 33.33%;
 }
+    .center img {
+    width: calc(33.33% - 14px);
+  }
 .progress-chart-container div {
   width: 33.33%;
 }
@@ -657,6 +668,14 @@ span,
 a {
   font-size: 0.5em;
 }
+  h4 {
+    font-size: calc(40px - 9px);
+  }
+
+  ul,
+  li {
+    font-size: calc(16px - 7px);
+  }
   .nav-container,
 .nav-tab {
   font-size: 0.5em;
@@ -669,6 +688,9 @@ a {
     height: auto;
     transition: transform 0.2s ease-in-out;
 }
+      .center img {
+    width: calc(33.33% - 20px);
+  }
 .progress-chart-container div {
   width: 50.00%;
 }
