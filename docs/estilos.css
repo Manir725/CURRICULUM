@@ -28,20 +28,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   background-color: #1e1f26;
   text-align: center;
-  padding: 0 12px; /* Ajuste de márgenes */
+  padding: 0 2em;
 }
 
 .nav h1,
-.slider h1,
-h3,
-h4,
-p {
+.slider h1 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: calc(4vw - 9px); /* Ajuste de tamaño */
+  font-size: 5vw;
   margin: 0;
   padding-bottom: 0.5rem;
   letter-spacing: 0.5rem;
@@ -50,15 +47,14 @@ p {
   z-index: 3;
 }
 
-h1:hover,
-h4:hover {
+h1:hover {
   transform: translate3d(0, -10px, 22px);
   color: #ff0266;
 }
 
 .slider h2 {
-  font-size: calc(1.5vw - 9px); /* Ajuste de tamaño */
-  letter-spacing: calc(0.15vw - 0.09em);
+  font-size: 2vw;
+  letter-spacing: 0.3rem;
   font-family: "ROBOTO", sans-serif;
   font-weight: 300;
   color: #faebd7;
@@ -68,12 +64,12 @@ h4:hover {
 #tab-publicaciones,
 #tab-contacto,
 #tab-progreso {
-  min-height: 200vh;
+  height: 200vh;
   background-color: #1e1f26;
 }
 
 h3.span {
-  font-size: calc(1.8vw - 9px); /* Ajuste de tamaño */
+  font-size: 2vw;
   letter-spacing: 0.7em;
   font-family: "ROBOTO", sans-serif;
   font-weight: 300;
@@ -84,18 +80,23 @@ h3.span {
 span:hover {
   color: #ff0266;
   font-weight: 500;
-  font-size: calc(2.2vw - 9px); /* Ajuste de tamaño */
+  font-size: 2.2vw;
 }
 
 .slider h4 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 31px; /* Ajuste de tamaño */
+  font-size: 40px;
   margin: 0;
   padding-bottom: 0.5rem;
   letter-spacing: 0.5rem;
   color: rgb(14, 125, 161);
   transition: all 0.3s ease;
   z-index: 3;
+}
+
+h4:hover {
+  transform: translate3d(0, -10px, 22px);
+  color: #ff0266;
 }
 
 a {
@@ -146,7 +147,7 @@ ul li {
   color: #03dac6;
   letter-spacing: 0.1rem;
   transition: all 0.5s ease;
-  font-size: calc(1.8vw - 9px); /* Ajuste de tamaño */
+  font-size: 2vw;
 }
 
 .nav-tab:hover {
@@ -179,7 +180,7 @@ ul li {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px; /* Ajuste de márgenes */
+  gap: 20px;
 }
 
 #tab-contacto .contacto-item {
@@ -193,13 +194,14 @@ ul li {
 
 .progress-chart-container {
   display: flex;
-  gap: 12px; /* Ajuste de márgenes */
+  gap: 20px;
   justify-content: space-between;
-  margin-bottom: 12px; /* Ajuste de márgenes */
+  margin-bottom: 50px;
 }
 
 .progress-chart-container div {
-  width: calc(33.33% - 12px); /* Ajuste de tamaño */
+  width: 300px;
+  height: 300px;
 }
 
 #tab-progreso .progress-chart .title,
@@ -223,19 +225,19 @@ ul li {
 }
 
 #tab-Diplomas {
-  padding: 12px; /* Ajuste de márgenes */
+  padding: 20px;
 }
 
 .diplomas-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px; /* Ajuste de márgenes */
+  gap: 20px;
   justify-content: center;
-  margin-top: 12px; /* Ajuste de márgenes */
+  margin-top: 20px;
 }
 
 .diploma-image {
-  max-width: 100%;
+  width: 320px;
   height: auto;
   transition: transform 0.2s ease-in-out;
 }
@@ -246,19 +248,19 @@ ul li {
 
 @media (min-width: 800px) {
   #tab-Diplomas .gallery {
-    margin: 12px; /* Ajuste de márgenes */
+    margin: 20px;
     width: 220px;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
 
   #tab-Diplomas .diploma-image:nth-child(n+7) {
-    margin: 12px; /* Ajuste de márgenes */
+    margin: 20px;
     width: 220px;
   }
 }
 
 #tab-Diplomas .diploma-image:nth-child(n+7) {
-  margin: 12px; /* Ajuste de márgenes */
+  margin: 20px;
   width: 220px;
 }
 
@@ -270,67 +272,84 @@ ul li {
 @media (min-width: 800px) {
   .nav h1,
   .slider h1 {
-    font-size: calc(5vw - 9px); /* Ajuste de tamaño */
+    font-size: 5vw;
   }
 
   .nav h2,
   .slider h2 {
-    font-size: calc(3vw - 9px); /* Ajuste de tamaño */
+    font-size: 3vw;
   }
 
   .nav-tab {
-    font-size: calc(3vw - 9px); /* Ajuste de tamaño */
+    font-size: 3vw;
+  }
+}
+
+@media screen only (min-width: 360px) {
+  .nav h1,
+  .slider h1 {
+    font-size: 8vw;
+  }
+
+  .nav h2,
+  .slider h2 {
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+  }
+
+  .nav-tab {
+    font-size: 1.2vw;
   }
 }
 
 @media (max-width: 1024px) {
   .nav h1,
   .slider h1 {
-    font-size: calc(4vw - 9px); /* Ajuste de tamaño */
+    font-size: 4vw;
   }
 
   .nav h2,
   .slider h2 {
-    font-size: calc(1.5vw - 9px); /* Ajuste de tamaño */
-    letter-spacing: calc(0.15vw - 0.09em);
+    font-size: 1.5vw;
+    letter-spacing: 0.15vw;
   }
 
   .nav-tab {
-    font-size: calc(1.8vw - 9px); /* Ajuste de tamaño */
+    font-size: 1.8vw;
   }
 }
 
 @media (max-width: 768px) {
   .nav h1,
   .slider h1 {
-    font-size: calc(6vw - 9px); /* Ajuste de tamaño */
+    font-size: 6vw;
   }
 
   .nav h2,
   .slider h2 {
-    font-size: calc(2vw - 9px); /* Ajuste de tamaño */
-    letter-spacing: calc(0.2vw - 0.09em);
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
   }
 
   .nav-tab {
-    font-size: calc(1.5vw - 9px); /* Ajuste de tamaño */
+    font-size: 1.5vw;
   }
 }
 
 @media (max-width: 480px) {
   .nav h1,
   .slider h1 {
-    font-size: calc(10vw - 9px); /* Ajuste de tamaño */
+    font-size: 10vw;
   }
 
   .nav h2,
   .slider h2 {
-    font-size: calc(3vw - 9px); /* Ajuste de tamaño */
-    letter-spacing: calc(0.3vw - 0.09em);
+    font-size: 3vw;
+    letter-spacing: 0.3vw;
   }
 
   .nav-tab {
-    font-size: calc(2vw - 9px); /* Ajuste de tamaño */
+    font-size: 2vw;
   }
 }
 
@@ -449,11 +468,12 @@ ul li {
 }
 
 .btn {
+  /* Los estilos existentes para el botón */
   display: inline-block;
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 23px 25px; 
+  padding: 23px 25px; /* Se redujo 30px a cada lado */
   margin-top: 35px;
   margin-bottom: 62px;
   justify-content: center;
@@ -465,17 +485,17 @@ ul li {
 }
 
 #download-box {
-  border: 2px solid #ffffff;
-  padding: 70px;
-  margin: 70px 0;
-  text-align: center;
+  border: 2px solid #ffffff; /* Borde blanco */
+  padding: 100px; /* Espaciado interno */
+  margin: 100px 0; /* Espaciado externo */
+  text-align: center; /* Centra el contenido */
 }
 
 #download-button {
   background-color: rgb(14, 125, 161);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 23px 25px; 
+  padding: 23px 25px; /* Se redujo 30px a cada lado */
   justify-content: center;
   align-items: center;
   display: inline-block;
